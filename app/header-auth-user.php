@@ -44,11 +44,11 @@
 <!--                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>-->
 <!--                    </div>-->
 
-                    <div class="header-user">
+                    <a href="#" class="header-user">
                         <span class="icon"><span class="ic-user ic-white"></span></span>
                         <span class="header-user__name dr-text__small"><b>Username</b></span>
                         <span class="header-user__status bage bg-accent-gradient__lighten">Base</span>
-                    </div>
+                    </a>
                 </nav>
             </div>
         </div>
