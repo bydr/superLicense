@@ -11,6 +11,18 @@
         <li><a href="reset-password-page.php" class="">Восстановление пароля</a></li>
         <li><a href="feedback-page.php" class="">Форма обратной связи</a></li>
         <li><a href="website-sections-page.php" class="">Разделы сайта</a></li>
+        <li><a href="cabinet-page.php" class="">Кабинет</a></li>
+        <li><a href="license-page.php" class="">Лицензии</a></li>
+        <li><a href="configurator1-page.php" class="">Конфигуратор 1</a></li>
+        <li><a href="configurator2-page.php" class="">Конфигуратор 2</a></li>
+        <li><a href="configurator3-page.php" class="">Конфигуратор 3</a></li>
+        <li><a href="configurator4-page.php" class="">Конфигуратор 4</a></li>
+        <li><a href="configurator5-page.php" class="">Конфигуратор 5</a></li>
+        <li><a href="configurator6-page.php" class="">Конфигуратор 6</a></li>
+        <li><a href="configurator7-page.php" class="">Конфигуратор 7</a></li>
+        <li><a href="configurator-end-page.php" class="">Конфигуратор Конец</a></li>
+        <li><a href="expertize.php" class="">Экспертиза документов</a></li>
+        <li><a href="expertize-payment.php" class="">Экспертиза документов - оплата</a></li>
     </ol>
 </div>
 
