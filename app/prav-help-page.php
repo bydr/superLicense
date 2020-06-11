@@ -18,7 +18,7 @@
                             <span class="ic-x"></span>
                         </button>
                         <form action="/"
-                              class="dr-form modal-content__wrapper max-w-650 mt-30">
+                              class="dr-form modal-content__wrapper max-w-650 mt-30 flex-column">
                             <div class="form-group">
                                 <input type="text"
                                        name="name"
@@ -36,7 +36,7 @@
                                           placeholder="Ваше сообщение"  required></textarea>
                             </div>
                             <p class="dr-text__small c-light text-center">
-                                Отправляя сообщение, вы соглашаетесь с <a href="#" class="dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" class="dr-text__small dr-text__underline">Политикой конфиденциальности.</a></p>
+                                Отправляя сообщение, вы соглашаетесь с <a href="#" class="c-light dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" class="c-light dr-text__small dr-text__underline">Политикой конфиденциальности.</a></p>
                             <div class="form-group text-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient w-100 max-w-300">отправить</button>
                             </div>

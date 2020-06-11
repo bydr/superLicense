@@ -7,7 +7,7 @@
     document.querySelector('#main').classList.add('bg-accent-gradient__darken');
 </script>
 
-<div class="section section-configurator section-configurator__1">
+<div class="section section-configurator section-configurator__1 bg-overlay">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 configurator-box__wrapper">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <p class="dr-text__small mt-20">
-                    <b>
+                    <b class="c-light">
                         <span class="c-orange">Важно!</span> Делайте каждый шаг в конфигураторе осознанно, строго следуя нашим инструкциям. После подтверждения выбора шага, вы будете переходить к следующему. Изменить данные в пройденном шаге будет невозможно.
                     </b>
                 </p>

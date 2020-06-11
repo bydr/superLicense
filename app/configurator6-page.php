@@ -7,7 +7,7 @@
     document.querySelector('#main').classList.add('bg-accent-gradient__darken');
 </script>
 
-<div class="section section-configurator section-configurator__3">
+<div class="section section-configurator bg-overlay section-configurator__6">
     <div class="container">
         <div class="configurator-box">
             <div class="modal-content modal-content__horizontal bg-accent__darker">
