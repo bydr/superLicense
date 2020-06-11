@@ -1,3 +1,4 @@
+</section>
 
 <footer class="footer bg-overlay">
     <div class="container">

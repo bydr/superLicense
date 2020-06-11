@@ -21,6 +21,7 @@
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">
                                 <input type="email"
+                                       name="email"
                                        class="dr-form-control form-control"
                                         placeholder="Почта">
                             </div>

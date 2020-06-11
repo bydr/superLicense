@@ -21,34 +21,52 @@
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">
                                 <input type="text"
+                                       name="fio"
                                        class="dr-form-control form-control"
+                                       required
                                         placeholder="Фамилия Имя Отчество">
                             </div>
                             <div class="form-group">
                                 <input type="tel"
+                                       name="tel"
+                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                        class="dr-form-control form-control"
+                                       required
                                         placeholder="Телефон">
                             </div>
                             <div class="form-group">
                                 <input type="email"
+                                       name="email"
                                        class="dr-form-control form-control"
+                                       required
                                         placeholder="Почта">
                             </div>
                             <div class="form-group">
                                 <input type="text"
+                                       name="name-company"
                                        class="dr-form-control form-control"
+                                       required
                                 placeholder="ИП или название компании">
                             </div>
                             <div class="form-group">
                                 <input type="password"
+                                       id="id-password"
+                                       name="password"
                                        class="dr-form-control form-control"
+                                       required
+                                       pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                                         placeholder="Пароль">
                             </div>
                             <div class="form-group">
                                 <input type="password"
+                                       id="id-confirm-password"
+                                       name="confirm-password"
                                        class="dr-form-control form-control"
+                                       required
+                                       pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                                        placeholder="Повторите пароль"
                                 >
+                                <p class="alert msg-validate" role="alert"></p>
                             </div>
                             <div class="form-group text-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient">Создать аккаунт</button>

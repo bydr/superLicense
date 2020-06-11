@@ -21,12 +21,16 @@
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">
                                 <input type="email"
+                                       name="email"
                                        class="dr-form-control form-control"
+                                       required
                                         placeholder="Почта">
                             </div>
                             <div class="form-group">
                                 <input type="password"
+                                       name="password"
                                        class="dr-form-control form-control"
+                                       required
                                         placeholder="Пароль">
                             </div>
                             <div class="text-center">
