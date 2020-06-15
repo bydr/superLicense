@@ -25,6 +25,7 @@ $(function () {
     $('.website-sections__title').matchHeight();
     $('.website-sections__item').matchHeight();
     $('.list-panel__item').matchHeight();
+    $('.material-item').matchHeight();
 
 
     /* выбор элемент из списка  */
@@ -172,6 +173,25 @@ $(function () {
                 .html('Пароли не совпадают')
                 .removeClass()
                 .addClass(`${defaultClassesAlert} alert-danger`);
+    });
+
+    let content = $('.readmore-content');
+    const maxHeightInitial = 1850;
+
+    $(document).ready(function () {
+
+        content
+            .attr('initial-height', content.height())
+            .css('max-height', `${maxHeightInitial}px`);
+    });
+
+    $('.readmore-btn').on('click', function (e) {
+        e.preventDefault();
+        $(this)
+            .addClass('hide')
+            .closest('.readmore')
+            .find(content).css('max-height', `${content.attr('initial-height')}px`)
+            .find('.readmore-overlay').css('opacity', 0);
     });
 
 });

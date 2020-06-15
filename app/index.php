@@ -23,8 +23,11 @@
         <li><a href="configurator-end-page.php" class="">Конфигуратор Конец</a></li>
         <li><a href="expertize.php" class="">Экспертиза документов</a></li>
         <li><a href="expertize-payment.php" class="">Экспертиза документов - оплата</a></li>
-        <li><a href="testimonials.php" class="">Отзывы</a></li>
+        <li><a href="testimonials-page.php" class="">Отзывы</a></li>
         <li><a href="prav-help-page.php" class="">Правовая помощь</a></li>
+        <li><a href="material-page.php" class="">Материал</a></li>
+        <li><a href="materials-page.php" class="">Лицензионное дело</a></li>
+        <li><a href="contacts-page.php" class="">Контакты</a></li>
     </ol>
 </div>
 

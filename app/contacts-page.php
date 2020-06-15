@@ -1,5 +1,5 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-empty.php'); ?>
+<?php require_once('header-auth-user.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-6.svg"; ?>
 
@@ -11,6 +11,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <h1 class="page-title headers-h1 text-center c-light">Контакты</h1>
+                <p class="headers-h3 text-center d-flex flex-column mb-50">
+                    <a href="tel:+7 999 888 77 66" class="c-light">+7 999 888 77 66</a>
+                    <a href="mailto:info@medlicense.ru" class="c-light">info@medlicense.ru</a>
+                </p>
                 <div class="modal">
                     <div class="modal-content bg-accent__lighter">
                         <button class="modal-close dr-btn dr-btn__icon">

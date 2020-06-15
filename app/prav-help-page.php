@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="headers-h1 page-title text-center w-100">Правовая помощь</h1>
+                <h1 class="headers-h1 page-title text-center w-100 c-light">Правовая помощь</h1>
                 <div class="modal">
                     <div class="modal-content bg-accent__lighter max-w-1000 pb-90">
                         <button class="modal-close dr-btn dr-btn__icon">

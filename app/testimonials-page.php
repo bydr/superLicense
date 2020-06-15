@@ -42,31 +42,38 @@
 
 <section class="section">
     <div class="container">
-        <div class="clients-list">
-            <p class="text-center w-100 headers-h1 page-title c-accent__darken">Наши клиенты</p>
-            <div class="row">
-                <?php foreach ($data['clients'] as $item) : ?>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="client-item">
-                        <div class="client-item__header">
-                            <p class="client-item__number c-orange"></p>
-                            <p class="c-accent__darker headers-h4"><?=$item['title']; ?></p>
-                        </div>
-                        <div class="client-item__body">
-                            <p class="c-accent__darker dr-text__normal">
-                                <?=$item['description']; ?>
-                            </p>
-                        </div>
+        <div class="readmore">
+            <div class="readmore-content">
+                <div class="clients-list">
+                    <p class="text-center w-100 headers-h1 page-title c-accent__darken">Наши клиенты</p>
+                    <div class="row">
+                        <?php foreach ($data['clients'] as $item) : ?>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="client-item">
+                                    <div class="client-item__header">
+                                        <p class="client-item__number c-orange"></p>
+                                        <p class="c-accent__darker headers-h4"><?=$item['title']; ?></p>
+                                    </div>
+                                    <div class="client-item__body">
+                                        <p class="c-accent__darker dr-text__normal">
+                                            <?=$item['description']; ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
-                <?php endforeach; ?>
-
+                <div class="readmore-overlay"></div>
+            </div>
+            <div class="readmore-btn__wrapper">
+                <a href="#" class="readmore-btn headers-h3 d-flex flex-column align-items-center c-accent__darken">
+                    Показать ещё
+                    <span class="ic-arrow-down mt-10"></span>
+                </a>
             </div>
         </div>
-        <a href="#" class="headers-h3 d-flex flex-column align-items-center c-accent__darken">
-            Показать ещё
-            <span class="ic-arrow-down mt-10"></span>
-        </a>
 
     </div>
 </section>
