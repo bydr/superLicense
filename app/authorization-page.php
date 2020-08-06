@@ -41,8 +41,9 @@
                             </div>
                         </form>
 
-                        <p class="dr-text__small text-center">
-                            Еще не зарегистрированы? <a href="registration-page.php" class="dr-text__normal c-orange"><b>Зарегистрироваться</b></a>
+                        <p class="dr-text__small text-center c-light ">
+                            Еще не зарегистрированы?
+                            <a href="registration-page.php" class="dr-text__normal c-orange"><b>Зарегистрироваться</b></a>
                         </p>
 
                     </div>

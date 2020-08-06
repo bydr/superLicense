@@ -15,10 +15,22 @@
                     <div class="modal-content bg-accent__darker">
                         <div class="configurator-box__header text-center">
                             <p class="dr-text__normal c-accent__lighter mb-0">Конфигуратор</p>
-                            <p class="headers-h2">Ваши файлы</p>
+                            <p class="headers-h2">Готово</p>
                         </div>
                         <div class="configurator-box__body">
-                            <h2 class="headers-h3 text-center c-accent__lightest">Системой сформировано <br> <span>17 файлов</span></h2>
+                            <p class="dr-text__small">
+                                <b class="c-light">Ваш лицензирующий орган -- Роспотребназдор Ростовской области.</b>
+                                <br>
+                                <br>
+                                <span class="c-light">Особенности получения лицензии в Ростовской области такие-то и такие-то.</span>
+                                <br>
+                                <br>
+                                <span class="c-orange__lighten">Пожалуйста, оставьте отзыв в разделе нашего сайта. Напишите как помогли наши инструкции или с какими трудностями вы столкнулись в процессе. </span>
+                                <br>
+                                <br>
+                                <span class="c-orange__lighten">Мы гарантируем актуальность информации на данный момент и обязуемся в течение 30 дней предоставить вам обновленные данные в случае их изменения.</span>
+                            </p>
+                            <h2 class="headers-h3 text-center c-accent__lightest">Системой сформирован <br> zip-архив документов, включая исчерпывающую инструкцию по получению медицинской лицензии самостоятельно</h2>
                             <div class="text-center">
                                 <a href="#" class="dr-btn dr-btn__big dr-btn__orange-gradient w-100 max-w-250">Скачать</a>
                             </div>

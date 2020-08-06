@@ -71,13 +71,17 @@
                             <div class="form-group text-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient">Создать аккаунт</button>
                             </div>
-                            <p class="dr-text__small c-light text-center">
-                                Регистрируясь, вы соглашаетесь с <a href="#" class="dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" class="dr-text__small dr-text__underline">Политикой конфиденциальности</a>.
-                            </p>
-                        </form>
 
+                        </form>
+                        <p class="dr-text__small text-center c-light">
+                            Уже зарегистрированы?
+                            <a href="registration-page.php" class="dr-text__normal c-orange"><b>Авторизуйтесь</b></a>
+                        </p>
                     </div>
                 </div>
+                <p class="dr-text__small c-accent__lightest text-center mt-10 max-w-400">
+                    Регистрируясь, вы соглашаетесь с <a href="#" class="dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" class="dr-text__small dr-text__underline">Политикой конфиденциальности</a>.
+                </p>
             </div>
         </div>
     </div>

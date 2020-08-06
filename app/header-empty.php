@@ -9,7 +9,7 @@
                              alt="super license"
                              title="super license"
                              class="img-responsive">
-                        <span class="dr-text__menu">Супермаркет медлицензий</span>
+                        <span class="dr-text__logo">Супермаркет <br> медлицензий</span>
                     </a>
                 </nav>
             </div>

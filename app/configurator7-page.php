@@ -18,10 +18,10 @@
                             <p class="dr-text__normal">Шаг 7 из 7</p>
                         </div>
                         <div class="configurator-box__body">
-                            <h2 class="headers-h2 text-center">Требования к помещениям</h2>
+                            <h2 class="headers-h2 text-center">Лицензирующий орган</h2>
                         </div>
                         <div class="configurator-box__footer">
-                            <p class="dr-text__small">Здесь без выбора, просто информация. Внезапно</p>
+                            <p class="dr-text__small"></p>
                         </div>
                     </div>
                 </div>

@@ -12,16 +12,26 @@
                     <div class="section-content__wrapper">
                         <a href="#" class="dr-btn dr-btn__accent-gradient max-w-250 w-100">форма обратной связи</a>
                         <nav class="footer-nav">
-                            <ul>
-                                <li><a href="#">Первая лицензия</a></li>
-                                <li><a href="#">Переоформление лицензий</a></li>
-                                <li><a href="#">Лицензионное дело</a></li>
-                                <li><a href="#">Экспертиза документов</a></li>
-                                <li><a href="#">Правовая помощь</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Правовая информация</a></li>
-                            </ul>
+                            <div class="row">
+                                <div class="col-12 col-md-7">
+                                    <ul>
+                                        <li><a href="#">Лицензионное дело</a></li>
+                                        <li><a href="#" class="c-accent__lighter">Конфигуратор «Первая лицензия»</a></li>
+                                        <li><a href="#" class="c-accent__lighter">Конфигуратор «Переоформление лицензии»</a></li>
+                                        <li><a href="#">Экспертиза документов</a></li>
+                                        <li><a href="#">Программы производственного контроля</a></li>
+                                        <li><a href="#">Трудовые договоры и договоры аренды</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <ul>
+                                        <li><a href="#">Правовая помощь</a></li>
+                                        <li><a href="#">Вопрос-ответ</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                        <li><a href="#">Личный кабинет</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </nav>
                         <p class="dr-text__small c-light" style="opacity: .5; margin-top: 15px;">® 2020. Все права защищены. Копирование материалов сайта запрещено.</p>
                     </div>

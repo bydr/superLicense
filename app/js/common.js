@@ -25,10 +25,11 @@ $(function () {
     $('.website-sections__title').matchHeight();
     $('.website-sections__item').matchHeight();
     $('.list-panel__item').matchHeight();
+    $('.service-item__title').matchHeight();
     $('.material-item').matchHeight();
 
 
-    /* выбор элемент из списка  */
+    /* выбор элемент из списка  (образование) */
     let listItems = $('.list-selection-js .list-selection__item');
     let listItemSelected = ".list-selection__item-selected";
 
@@ -96,7 +97,9 @@ $(function () {
         </div>
     `;
     }
-    /* выбор элемент из списка 2 */
+    /* выбор элемент из списка  (образование) */
+
+    /* выбор элемент из списка (район/город) */
     let listItemsCustom = $('.list-selection-js-custom .list-selection__item');
 
     listItemsCustom.on('click', function () {
@@ -112,17 +115,17 @@ $(function () {
 
 
     });
-    /* выбор элемента из списка 2 */
+    /* выбор элемент из списка (район/город) */
 
 
     /* кастомный input[type="file"] */
     $('body').on('click', '.fl_default', function () {
         $(".fl_default").change(function(){
-            var filename = "<ul class='uploaded-file'>";
+            var filename = "<p class='uploaded-file'>";
                 filename += `Загружено 
                 ${$(this)[0].files.length} 
                 ${ getEndgingWord($(this)[0].files.length, ['файл', 'файла', 'файлов'])}`;
-            filename += "</ul>";
+            filename += "</p>";
             $(".fl_nm")
                 .html(filename)
                 .addClass("selected_file");
@@ -193,5 +196,89 @@ $(function () {
             .find(content).css('max-height', `${content.attr('initial-height')}px`)
             .find('.readmore-overlay').css('opacity', 0);
     });
+
+    /* раскрытие и скрытие service list */
+    var serviceItemBtn = $('.service-item__toggle .dr-btn');
+    serviceItemBtn.on('click',function (e) {
+        e.preventDefault();
+        let serviceItem = $(this).closest('.service-item_wrapper');
+
+        let btnTextDefault = "";
+        btnTextDefault = $(this).text();
+        $(this).text($(this).attr('btnTextAlternate'));
+        $(this).attr('btnTextAlternate', btnTextDefault);
+
+        if (serviceItem.hasClass('is-active')) {
+            serviceItem.removeClass('is-active');
+            // serviceItem.slideUp(300);
+        } else {
+            serviceItem.addClass('is-active');
+            // serviceItem.slideDown(300);
+        }
+
+    });
+
+    let modalBtnClose = ".dr-modal__close";
+    let activeClass = "is-active";
+
+    /* открытие модалки по нажатию на кнопку */
+    $("*[data-modal]").on('click', function (e) {
+        e.preventDefault();
+        drModalShow($(this));
+    });
+
+    /* закрытие модалки по нажатию на кнопку */
+    $(modalBtnClose).on('click', function () {
+        drModalHide($(this));
+    });
+
+    function drModalHide(context) {
+        $(context).closest('.dr-modal').removeClass(activeClass);
+        $('html').removeClass('o-hidden');
+    }
+
+    function drModalShow(currentTarget, overlayStatus = true){
+        let btnModalId = currentTarget.data('modal');
+        let modal = `.dr-modal[id="${btnModalId}"]`;
+        if (btnModalId) {
+            $(modal).addClass(activeClass);
+        }
+        $(modal).find('.dr-modal__overlay').eq(0).css("opacity", overlayStatus ? "1" : "0" );
+        $('html').addClass('o-hidden');
+    }
+
+    $(".modal-cancel, #btn_deleteAccount").on("click", function () {
+        drModalHide($(this));
+    });
+
+    const TIMER_DELETE_ACCOUNT = 6;
+    var timerBlock = '.timer-seconds';
+    var timerSeconds = 0;
+
+    $(document).ready(function () {
+        $(timerBlock).html(TIMER_DELETE_ACCOUNT);
+    });
+
+    $('#btn_deleteAccount').on('click', function () {
+        var index = TIMER_DELETE_ACCOUNT;
+        timerSeconds = setInterval(function () {
+            $(timerBlock).html(index--);
+            if (index < 0) {
+                clearTimer(timerSeconds);
+            }
+        }, 1000);
+
+    });
+
+    $('.modal-cancel').on('click', function () {
+        setTimeout(function () {
+            clearTimer(timerSeconds);
+        }, 200)
+    });
+
+    function clearTimer(timer) {
+        clearInterval(timer);
+        $(timerBlock).html(TIMER_DELETE_ACCOUNT);
+    }
 
 });

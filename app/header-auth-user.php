@@ -9,7 +9,7 @@
                              alt="super license"
                              title="super license"
                              class="img-responsive">
-                        <span class="dr-text__menu">Супермаркет медлицензий</span>
+                        <span class="dr-text__logo">Супермаркет <br> медлицензий</span>
                     </a>
 
                     <?php echo file_get_contents('template-parts/navbar-menu.php'); ?>
@@ -44,18 +44,21 @@
 <!--                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>-->
 <!--                    </div>-->
 
-                    <a href="#" class="data-user">
-                        <span class="icon"><span class="ic-user ic-white"></span></span>
-                        <span class="data-user__title dr-text__small"><b>Username</b></span>
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="data-user">
+                            <span class="icon"><span class="ic-user ic-white"></span></span>
+                            <span class="data-user__title dr-text__small c-light"><b>Username</b></span>
 
-                        <span class="data-user__status bage bg-accent-gradient__lighten">Base</span>
-<!--                        <span class="data-user__status bage bg-orange-darken">pro</span>-->
+                            <span class="data-user__status bage bg-accent-gradient__lighten">Base</span>
+                            <!--                        <span class="data-user__status bage bg-orange-darken">pro</span>-->
 
-                        <!-- изменение статуса:
-                            для Base    - класс bg-accent-gradient__lighten
-                            для pro     - класс bg-orange-darken
-                        -->
-                    </a>
+                            <!-- изменение статуса:
+                                для Base    - класс bg-accent-gradient__lighten
+                                для pro     - класс bg-orange-darken
+                            -->
+                        </a>
+<!--                        <a href="#" class="dr-text__normal fw-bold ml-20">Выйти</a>-->
+                    </div>
                 </nav>
             </div>
         </div>

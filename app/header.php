@@ -9,7 +9,7 @@
                              alt="super license"
                              title="super license"
                              class="img-responsive">
-                        <span class="dr-text__menu">Супермаркет медлицензий</span>
+                        <span class="dr-text__logo">Супермаркет <br> медлицензий</span>
                     </a>
 
                     <?php echo file_get_contents('template-parts/navbar-menu.php'); ?>
@@ -40,8 +40,7 @@
                     - скрывается блок .btn-group и показывается header-user  -->
 
                     <div class="btn-group align-items-center btn-group__auth d-flex">
-                        <a href="#" id="id-btn__signin" class="dr-btn dr-text__menu c-accent__lighter">Вход</a>
-                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>
+                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Вход / Регистрация</a>
                     </div>
                 </nav>
             </div>
