@@ -31,7 +31,7 @@
                 <div class="configurator-btns__wrapper">
                     <div class="configurator-btns">
                         <p class="dr-text__normal">Text</p>
-                        <a href="#" class="dr-btn dr-btn__accent-lightest">Дальше</a>
+                        <a href="#" class="dr-btn dr-btn__accent-lightest mb-30">Дальше</a>
                     </div>
                 </div>
 

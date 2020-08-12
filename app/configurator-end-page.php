@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 configurator-box__wrapper">
-                <div class="configurator-box max-w-820">
+                <div class="configurator-box max-w-820 mb-50">
                     <div class="modal-content bg-accent__darker">
                         <div class="configurator-box__header text-center">
                             <p class="dr-text__normal c-accent__lighter mb-0">Конфигуратор</p>

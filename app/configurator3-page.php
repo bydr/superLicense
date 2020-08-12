@@ -62,7 +62,7 @@
                 <div class="list-selection__item"><span class="list-selection__item-inner"><?=$item; ?>&nbsp;→</span></div>
             <?php endforeach; ?>
         </div>
-        <div class="text-center mt-100">
+        <div class="text-center mt-100 mb-100">
             <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>
         </div>
     </div>

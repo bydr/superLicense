@@ -34,7 +34,7 @@
             <?php endforeach; ?>
         </ol>
         <div class="text-center mt-100">
-            <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400">Дальше</a>
+            <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400 mb-100">Дальше</a>
         </div>
     </div>
 </div>

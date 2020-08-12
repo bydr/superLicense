@@ -1,5 +1,5 @@
 <header class="header bg-accent">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <nav class="dr-navbar  navbar navbar-expand-sm d-flex align-items-center justify-content-between w-100">

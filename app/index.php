@@ -29,7 +29,7 @@
         <li><a href="material-page.php" class="">Материал</a></li>
         <li><a href="materials-page.php" class="">Страница материалов</a></li>
         <li><a href="license-work-page.php" class="">Лиц. дело </a></li>
-        <li><a href="license-work-page[AFTER_REGISTRATION].php" class="">Лиц. дело (посл регистрации)</a></li>
+        <li><a href="license-work-page[AFTER_REGISTRATION].php" class="">Лиц. дело (после регистрации)</a></li>
         <li><a href="contacts-page.php" class="">Контакты</a></li>
     </ol>
 </div>
