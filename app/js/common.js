@@ -281,4 +281,28 @@ $(function () {
         $(timerBlock).html(TIMER_DELETE_ACCOUNT);
     }
 
+    $('.radio-group__wrapper').masonry({
+        // options
+        itemSelector: '.radio-group__item'
+    });
+
+    $('#id-year').mask('0000', {
+        placeholder: 'XXXX',
+        translation: {
+            0: {
+                pattern: /[0-9]/
+            }
+        }
+    });
+    $('.mask-date').mask('00.00.0000', {
+        placeholder: '__ . __ . ____',
+        translation: {
+            0: {
+                pattern: /[0-9]/
+            }
+        }
+    });
+    $('#id-tel-lead').mask("+0 000 000 0000", {placeholder: "+_ ___ ___ ____" });
+
+    $('[data-toggle="popover"]').popover()
 });

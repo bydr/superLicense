@@ -68,7 +68,7 @@
                                 >
                                 <p class="alert msg-validate" role="alert"></p>
                             </div>
-                            <div class="form-group text-center">
+                            <div class="form-group text-center align-items-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient">Создать аккаунт</button>
                             </div>
 

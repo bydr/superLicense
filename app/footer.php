@@ -1,7 +1,7 @@
 </section>
 
 <footer class="footer bg-overlay">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-4">
                 <!-- картинка на страницах разная, поэтому в каждом шаблоне она обьявлена -->
@@ -10,7 +10,7 @@
             <div class="col-12 col-sm-12 col-md-7 offset-lg-1">
                 <div class="section-content align-items-end">
                     <div class="section-content__wrapper">
-                        <a href="#" class="dr-btn dr-btn__accent-gradient max-w-250 w-100">форма обратной связи</a>
+                        <a href="#" class="dr-btn dr-btn__accent-gradient max-w-300 w-100">форма обратной связи</a>
                         <nav class="footer-nav">
                             <div class="row">
                                 <div class="col-12 col-md-7">
