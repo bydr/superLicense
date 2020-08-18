@@ -1,12 +1,12 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-6.svg"; ?>
 <script>
     document.querySelector('#main').classList.add('bg-accent-gradient__lighten');
 </script>
 
-<div class="section section-configurator bg-overlay section-configurator__6">
+<div class="section section-configurator_ppk bg-overlay">
     <div class="container">
         <h1 class="headers-h1 c-light text-center mb-50">Программа производственного контроля</h1>
         <div class="configurator-box mb-50">
@@ -53,7 +53,7 @@
                                     Телефон руководителя
                                 </label>
                                 <input type="tel" class="dr-form-control form-control"
-                                       name="tel-lead" id="id-tel-lead" required="" placeholder="">
+                                       name="tel-lead" id="id-tel-lead" required="" placeholder=" ">
                             </div>
                             <div class="form-group">
                                 <label for="id-ur-addr" class="label form-group__label">
@@ -76,22 +76,22 @@
                                     ИНН
                                 </label>
                                 <input type="text" class="dr-form-control form-control"
-                                       name="inn" id="id-inn" required="" placeholder="" pattern="[0-9]+">
+                                       name="inn" id="id-inn" required="" placeholder=" " pattern="[0-9]+">
+                                <div class="form-group__message error">Проверьте правильность введеных данных</div>
                             </div>
-                            <p class="dr-text__normal fw-bold c-accent__lightest mt-60">Приказ о назначении ответственного за радиационную безопасность</p>
                             <div class="form-group form-group_row ml-0" style="max-width: 420px;">
                                 <label for="id-number-people" class="label form-group__label">
-                                    Кол-во работающих <br><span class="dr-text__small">(в кабинете, косметологии, мед. центре и т. д.)</span>
+                                    <span>Кол-во работающих</span><span class="dr-text__small">на данном предприятии</span>
                                 </label>
                                 <div class="input-wrapper">
                                     <input type="number" min="0" class="dr-form-control form-control input-number-people"
-                                           name="number-people" id="id-number-people" required="">
+                                           name="number-people" id="id-number-people" required="" placeholder=" ">
                                     <span class="dr-text__normal">чел.</span>
                                 </div>
                             </div>
                             <div class="form-group form-group_row ml-0">
                                 <label for="id-number-people2" class="label form-group__label">
-                                    Из них относящихся к «декретированному контингенту»
+                                    <span>Из них относящихся к «декретированному контингенту»</span>
                                     <span class="tooltip-btn tooltip-btn__circle"
                                           data-toggle="popover"
                                           data-placement="top"
@@ -115,7 +115,7 @@
                                 </label>
                                 <div class="input-wrapper">
                                     <input type="number" min="0" class="dr-form-control form-control input-number-people"
-                                           name="number-people2" id="id-number-people2" required="">
+                                           name="number-people2" id="id-number-people2" required="" placeholder=" ">
                                     <span class="dr-text__normal">чел.</span>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@
                                                 №
                                             </label>
                                             <input type="text" class="dr-form-control form-control"
-                                                   name="reg-num" id="id-reg-num" required="" placeholder="" pattern="[0-9]+">
+                                                   name="reg-num" id="id-reg-num" required="" placeholder=" " pattern="[0-9]+">
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-3 p-0">
@@ -139,7 +139,7 @@
                                                 от
                                             </label>
                                             <input type="text" class="dr-form-control form-control mask-date"
-                                                   name="reg-date" id="id-reg-date" required="" placeholder="">
+                                                   name="reg-date" id="id-reg-date" required="" placeholder=" ">
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                                             кем выдано
                                         </label>
                                         <input type="text" class="dr-form-control form-control"
-                                               name="issued-by" id="id-issued-by" required="">
+                                               name="issued-by" id="id-issued-by" required="" placeholder=" ">
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                                 </label>
                                 <input type="text" class="dr-form-control form-control"
                                        name="ogrn" id="id-ogrn" required=""
-                                       placeholder="">
+                                       placeholder=" ">
                             </div>
                             <div class="form-group">
                                 <label for="id-ogrn-date" class="label form-group__label">
@@ -167,10 +167,10 @@
                                 </label>
                                 <input type="text" class="dr-form-control form-control mask-date"
                                        name="ogrn-date" id="id-ogrn-date" required=""
-                                       placeholder="">
+                                       placeholder=" ">
                             </div>
                             <div class="form-group">
-                                <label for="id-ogrn-date" class="label form-group__label">
+                                <label for="id-gov-peop" class="label form-group__label">
                                     Перечень должностных лиц (работников), на которых возложены функции по осуществлению производственного контроля (ФИО, должность, телефон)
                                 </label>
                                 <div class="controls-added">
@@ -178,6 +178,7 @@
                                         <div class="controls-added__element">
                                             <input type="text" class="dr-form-control form-control"
                                                    required=""
+                                                   id="id-gov-peop"
                                                    placeholder="Иванов Иван Иванович, директор, 8-999-777-0000">
                                         </div>
                                         <div class="controls-added__btn">
@@ -186,23 +187,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="id-otd-control" class="label form-group__label">
-                                    Регион (территориальный отдел управления Роспотребнадзора)
-                                </label>
-                                <input type="text" class="dr-form-control form-control"
-                                       name="otd-control" id="id-otd-control" required=""
-                                       placeholder="Ростовская область">
-                            </div>
-                            <p class="dr-text__normal fw-bold c-accent__lightest mt-60 mb-15">Производные переменные</p>
-                            <div class="form-group">
-                                <label for="id-fio-short" class="label form-group__label">
-                                    ФИО руководителя кратко
-                                </label>
-                                <input type="text" class="dr-form-control form-control"
-                                       name="fio-short" id="id-fio-short" required=""
-                                       pattern="^([а-яА-ЯёЁa-zA-Z]+) ([а-яА-ЯёЁa-zA-Z]{1})\. ([а-яА-ЯёЁa-zA-Z]{1})\.$" placeholder="Иванов И. И.">
                             </div>
                         </div>
                     </div>

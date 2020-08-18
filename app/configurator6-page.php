@@ -1,13 +1,9 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 
-<script>
-    document.querySelector('.header').classList.add('bg-transparent');
-    document.querySelector('#main').classList.add('bg-accent-gradient__darken');
-</script>
 
-<div class="section section-configurator bg-overlay section-configurator__6">
+<div class="section section-configurator bg-overlay section-configurator__6 bg-accent-gradient__darken">
     <div class="container">
         <div class="configurator-box">
             <div class="modal-content modal-content__horizontal bg-accent__darker">

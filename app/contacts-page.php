@@ -1,5 +1,5 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-cabinet.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-6.svg"; ?>
 
@@ -16,12 +16,9 @@
                     <a href="tel:+7 999 888 77 66" class="c-light">+7 999 888 77 66</a>
                     <a href="mailto:info@medlicense.ru" class="c-light">info@medlicense.ru</a>
                 </p>
-                <div class="modal">
+                <div class="modal modal-wpadding">
                     <div class="modal-content bg-accent__lighter">
-                        <button class="modal-close dr-btn dr-btn__icon">
-                            <span class="ic-x"></span>
-                        </button>
-                        <p class="modal-title headers-h2">Форма обратной связи</p>
+                        <p class="modal-title headers-h2 mt-30">Форма обратной связи</p>
                         <form action="/"
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">
@@ -44,7 +41,7 @@
                                           required
                                           placeholder="Ваше сообщение" ></textarea>
                             </div>
-                            <div class="form-group text-center">
+                            <div class="form-group text-center w-100 d-flex align-items-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient">отправить</button>
                             </div>
                             <p class="dr-text__small c-light text-center">

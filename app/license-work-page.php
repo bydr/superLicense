@@ -1,5 +1,5 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-cabinet.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-5.svg"; ?>
 
@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="headers-h1 text-center page-title c-accent__darken">Лицензионное дело</h1>
-                <div class="section-content max-w-820">
+                <div class="max-w-820">
                     <p class="dr-text__normal c-accent__darker">
                         Лицензионное дело, если вдуматься, не просто файлы с листами бумаги. Это сконцентрированное, сжатое в малый объем время. Ваше время. Физические и ментальные усилия, которые вы прилагаете для запуска вашего бизнеса. Ваши нервы и ваши деньги. Это ваши ресурсы, иногда невосполнимые. Наш опыт общения с огромным количеством лицензиатов позволяет нам утверждать следующее – большинство соискателей медицинских лицензий тратят свои деньги и время впустую!
                         <br>

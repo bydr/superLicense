@@ -11,12 +11,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="modal">
+                <div class="modal modal-wpadding">
                     <div class="modal-content bg-accent">
-                        <button class="modal-close dr-btn dr-btn__icon">
-                            <span class="ic-x"></span>
-                        </button>
-                        <p class="modal-title headers-h2">Регистрация</p>
+                        <p class="modal-title headers-h2 mt-30">Регистрация</p>
                         <form action="/"
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">

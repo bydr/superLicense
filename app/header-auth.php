@@ -1,5 +1,5 @@
-<header class="header bg-accent">
-    <div class="container">
+<header class="header header-auth bg-accent">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <nav class="dr-navbar  navbar navbar-expand-sm d-flex align-items-center justify-content-between w-100">
@@ -35,12 +35,29 @@
                     </div>
 
 
-                    <!-- Login / Registration -->
+                    <!-- User data (if logged user) -->
                     <!-- Данные пользвателя - единственное отличие от header.php
                     - скрывается блок .btn-group и показывается header-user  -->
 
-                    <div class="btn-group align-items-center btn-group__auth d-flex">
-                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient dr-btn-h40">Вход / Регистрация</a>
+<!--                    <div class="btn-group align-items-center btn-group__auth d-flex">-->
+<!--                        <a href="#" id="id-btn__signin" class="dr-btn dr-text__menu c-accent__lighter">Вход</a>-->
+<!--                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>-->
+<!--                    </div>-->
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="#" class="data-user">
+                            <span class="icon"><span class="ic-user ic-white"></span></span>
+                            <span class="data-user__title dr-text__small c-light"><b>Username</b></span>
+
+                            <span class="data-user__status bage bg-orange-darken">Pro</span>
+                            <!--                        <span class="data-user__status bage bg-orange-darken">pro</span>-->
+
+                            <!-- изменение статуса:
+                                для Base    - класс bg-accent-gradient__lighten
+                                для pro     - класс bg-orange-darken
+                            -->
+                        </a>
+<!--                        <a href="#" class="dr-text__normal fw-bold ml-20">Выйти</a>-->
                     </div>
                 </nav>
             </div>
@@ -49,5 +66,4 @@
 </header>
 
 <section class="content-page">
-
 

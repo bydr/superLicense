@@ -16,15 +16,20 @@
                             <?=strip_tags($item['description']); ?>
                         <?php endif ?>
                     </p>
-                    <p class="dr-text__normal service-item__show_active service-item__descr_full">
-                        <?=$item['description']; ?>
-                    </p>
-                    <a href="#" class="service-item_btn_cta dr-btn dr-btn__outline c-orange max-w-250 service-item__show_active">
-                        <span class="headers-h3"><?=$item['cta']; ?></span>
-                    </a>
+                    <div class="service-item__show_active">
+                        <p class="dr-text__normal service-item__descr_full">
+                            <?=$item['description']; ?>
+
+                        </p>
+                        <div class="d-flex w-100 text-center justify-content-center">
+                            <a href="#" class="service-item_btn_cta dr-btn dr-btn__outline c-orange max-w-250">
+                                <span class="headers-h3"><?=$item['cta']; ?></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="service-item__toggle text-center">
-                    <a href="#" class="dr-btn dr-btn__orange-gradient" btnTextAlternate="<?=$item['btnTxtAlternate']; ?>"><?=$item['btnTxt']; ?></a>
+                    <a href="#" class="dr-btn dr-btn-h40 dr-btn__orange-gradient" btnTextAlternate="<?=$item['btnTxtAlternate']; ?>"><?=$item['btnTxt']; ?></a>
                 </div>
             </div>
         </div>

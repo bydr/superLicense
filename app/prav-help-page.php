@@ -1,22 +1,16 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = ""; ?>
 
-<script>
-    document.body.classList.add('bg-accent-gradient__lighten');
-</script>
 
-<section class="section section-prav-help">
+<section class="section section-prav-help bg-accent-gradient__lighten">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="headers-h1 page-title text-center w-100 c-light">Правовая помощь</h1>
-                <div class="modal">
+                <div class="modal modal-wpadding">
                     <div class="modal-content bg-accent__lighter max-w-1000 pb-90">
-                        <button class="modal-close dr-btn dr-btn__icon">
-                            <span class="ic-x"></span>
-                        </button>
                         <form action="/"
                               class="dr-form modal-content__wrapper max-w-650 mt-30 flex-column">
                             <div class="form-group">

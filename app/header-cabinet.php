@@ -1,4 +1,4 @@
-<header class="header bg-accent">
+<header class="header header-cabinet">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -12,7 +12,7 @@
                         <span class="dr-text__logo">Супермаркет <br> медлицензий</span>
                     </a>
 
-                    <?php echo file_get_contents('template-parts/navbar-menu.php'); ?>
+                    <p class="header-title-page dr-text__normal fw-bold d-none d-md-flex">Личный кабинет</p>
 
                     <div class="mobile-menu d-none">
                         <button class="dr-btn dr-btn__icon mobile-menu__btn">
@@ -44,7 +44,7 @@
 <!--                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>-->
 <!--                    </div>-->
 
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
                         <a href="#" class="data-user">
                             <span class="icon"><span class="ic-user ic-white"></span></span>
                             <span class="data-user__title dr-text__small c-light"><b>Username</b></span>

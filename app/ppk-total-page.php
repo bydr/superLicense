@@ -1,12 +1,10 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-6.svg"; ?>
-<script>
-    document.querySelector('#main').classList.add('bg-accent-gradient__lighten');
-</script>
 
-<div class="section section-configurator bg-overlay ">
+
+<div class="section section-configurator_ppk bg-overlay bg-accent-gradient__lighten">
     <div class="container">
         <h1 class="headers-h1 c-light text-center mb-50">Программа производственного контроля</h1>
         <div class="configurator-box mb-50">
@@ -18,7 +16,7 @@
                 </div>
                 <div class="configurator-box__body">
                     <div class="modal">
-                        <div class="modal-content modal-content__components w-100 max-w-820 bg-light">
+                        <div class="modal-content modal-box_notpadding modal-content__components w-100 max-w-820 bg-light">
                             <div class="modal-header bg-orange-gradient">
                                 <p class="headers-h1 w-100 text-center">Программа производственного контроля</p>
                             </div>

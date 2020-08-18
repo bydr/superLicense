@@ -1,12 +1,12 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-6.svg"; ?>
 <script>
     document.querySelector('#main').classList.add('bg-accent-gradient__lighten');
 </script>
 
-<div class="section section-configurator bg-overlay section-configurator__6">
+<div class="section section-configurator_ppk bg-overlay">
     <div class="container">
         <h1 class="headers-h1 c-light text-center mb-50">Программа производственного контроля</h1>
         <div class="configurator-box mb-50">
@@ -61,7 +61,7 @@
                                     Номер
                                 </label>
                                 <input type="text" class="dr-form-control form-control"
-                                       name="number" id="id-number" required="">
+                                       name="number" id="id-number" placeholder=" " required="">
                             </div>
                             <div class="form-group">
                                 <label for="id-date" class="label form-group__label">
@@ -69,15 +69,6 @@
                                 </label>
                                 <input type="text" class="dr-form-control form-control mask-date"
                                        name="date" id="id-date" required="">
-                            </div>
-                            <p class="dr-text__normal fw-bold c-accent__lightest mt-60">Производные переменные</p>
-                            <div class="form-group">
-                                <label for="id-fio-short" class="label form-group__label">
-                                    ФИО руководителя кратко
-                                </label>
-                                <input type="text" class="dr-form-control form-control"
-                                       name="fio-short" id="id-fio-short" required=""
-                                       pattern="^([а-яА-ЯёЁa-zA-Z]+) ([а-яА-ЯёЁa-zA-Z]{1})\. ([а-яА-ЯёЁa-zA-Z]{1})\.$" placeholder="Иванов И. И.">
                             </div>
                         </div>
                     </div>

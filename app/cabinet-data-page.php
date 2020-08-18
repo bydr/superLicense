@@ -1,5 +1,5 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-cabinet.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-8.svg"; ?>
 
@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="section-cabiner__inner">
             <div class="row">
-                <div class="col-12 col-lg-4 col-md-4 col-sm-12 bg-light">
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 bg-light">
                     <div class="section-sidebar sidebar d-flex justify-content-center">
                         <div class="sidebar-inner">
                             <div class="data-user align-items-start justify-content-start">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-8 col-md-8 col-sm-12 section-content__cabinet-wrapper bg-accent__lightest">
+                <div class="col-12 col-lg-9 col-md-9 col-sm-12 section-content__cabinet-wrapper bg-accent__lightest">
                     <div class="section-content__cabinet ">
                         <h2 class="headers-h3 c-accent__darken mb-30">Личные данные</h2>
                         <ul class="cabinet-info">

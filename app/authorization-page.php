@@ -7,16 +7,13 @@
     document.body.classList.add('bg-accent-gradient__lighten');
 </script>
 
-<section class="section section-auth">
+<section class="section section-auth bg-accent-gradient__lighten">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="modal">
+                <div class="modal modal-wpadding">
                     <div class="modal-content bg-accent__darker">
-                        <button class="modal-close dr-btn dr-btn__icon">
-                            <span class="ic-x"></span>
-                        </button>
-                        <p class="modal-title headers-h2">Авторизация</p>
+                        <p class="modal-title headers-h2 mt-30">Авторизация</p>
                         <form action="/"
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">

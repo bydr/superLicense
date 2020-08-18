@@ -1,11 +1,11 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-cabinet.php'); ?>
 <?php require_once('params.php'); ?>
 <script>
     document.querySelector('#main').classList.add('bg-accent-gradient__darken');
 </script>
 
-<div class="section section-configurator bg-overlay section-configurator__6">
+<div class="section section-configurator section-configurator_reregistr bg-overlay">
     <div class="container">
         <div class="configurator-box mb-50">
             <div class="modal-content modal-content__horizontal bg-accent__darker">

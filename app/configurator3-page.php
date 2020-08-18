@@ -1,13 +1,9 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 
-<script>
-    document.querySelector('.header').classList.add('bg-transparent');
-    document.querySelector('#main').classList.add('bg-accent-gradient__darken');
-</script>
 
-<div class="section section-configurator section-configurator__3 bg-overlay">
+<div class="section section-configurator section-configurator__3 bg-overlay bg-accent-gradient__darken">
     <div class="container">
         <div class="configurator-box">
             <div class="modal-content modal-content__horizontal bg-accent__darker">
@@ -62,7 +58,7 @@
                 <div class="list-selection__item"><span class="list-selection__item-inner"><?=$item; ?>&nbsp;→</span></div>
             <?php endforeach; ?>
         </div>
-        <div class="text-center mt-100 mb-100">
+        <div class="text-center mt-100 pb-90">
             <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>
         </div>
     </div>

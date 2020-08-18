@@ -1,13 +1,10 @@
 <?php require_once('head.php'); ?>
-<?php require_once('header-auth-user.php'); ?>
+<?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
 <?php $dataImgFooter = "img/_src/frame-7.svg"; ?>
 
-<script>
-    document.body.classList.add('bg-accent-gradient__lighten');
-</script>
 
-<section class="section section-website-sections">
+<section class="section section-website-sections bg-accent-gradient__lighten">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -11,12 +11,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="modal">
+                <div class="modal modal-wpadding">
                     <div class="modal-content bg-accent__lighter">
-                        <button class="modal-close dr-btn dr-btn__icon">
-                            <span class="ic-x"></span>
-                        </button>
-                        <p class="modal-title headers-h2">Форма обратной связи</p>
+                        <p class="modal-title headers-h2 mt-30">Форма обратной связи</p>
                         <form action="/"
                               class="dr-form modal-content__wrapper">
                             <div class="form-group">
@@ -39,7 +36,7 @@
                                           required
                                           placeholder="Ваше сообщение" ></textarea>
                             </div>
-                            <div class="form-group text-center">
+                            <div class="form-group d-flex align-items-center justify-content-center text-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient">отправить</button>
                             </div>
                             <p class="dr-text__small c-light text-center">
