@@ -1,3 +1,4 @@
+<script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
 
 </body>
