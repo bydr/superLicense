@@ -43,6 +43,7 @@
         <li><a href="contracts-rent-three-person-page.php" class="">Договор аренды 3 лица форма</a></li>
         <li><a href="contracts-employment-page.php" class="">Трудовой договор форма</a></li>
         <li><a href="contracts-paid-medical-page.php " class="">Договор платных мед услуг форма</a></li>
+        <li><a href="contracts-total-page.php" class="">Договора оплата</a></li>
     </ol>
 </div>
 

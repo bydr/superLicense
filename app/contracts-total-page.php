@@ -21,7 +21,7 @@
                                 <p class="headers-h1 w-100 text-center">Трудовой договор стандартный</p>
                             </div>
                             <div class="modal-body w-100 text-center ">
-                                <p class="headers-h2 c-accent__darken">Подготовлен документ ППК</p>
+                                <p class="headers-h2 c-accent__darken">Договор подготовлен</p>
                                 <p class="dr-text__normal c-accent__darker mb-0">Стоимость:</p>
                                 <p class="headers-h1 c-accent__darker">750 ₽</p>
                                 <div class="d-flex justify-content-center w-100">
