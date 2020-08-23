@@ -21,7 +21,7 @@
                         требуется составить ППК
                         <br>(программу производственного контроля)</h2>
                     <div class="row mt-80">
-                        <div class="radio-group__wrapper d-flex flex-wrap w-100">
+                        <div class="radio-group__wrapper radio-group__masonry d-flex flex-wrap w-100">
                             <div class="radio-group__item col-12 col-sm-6 col-md-6">
                                 <div class="radio-group">
                                     <p class="radio-group__title c-accent__lightest">ИИИ (источник ионизирующего
@@ -69,7 +69,7 @@
                                     <ul class="radio-group__list">
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2" checked>
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -80,7 +80,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2" checked>
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -91,7 +91,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -102,7 +102,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -113,7 +113,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -124,7 +124,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -135,7 +135,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -146,7 +146,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup2">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -164,7 +164,7 @@
                                     <ul class="radio-group__list">
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3" checked>
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -175,7 +175,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -186,7 +186,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -197,7 +197,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -208,7 +208,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -219,7 +219,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -230,7 +230,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -241,7 +241,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup3">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -259,7 +259,7 @@
                                     <ul class="radio-group__list">
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup4" checked>
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -270,7 +270,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup4">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -281,7 +281,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup4">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -292,7 +292,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup4">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -303,7 +303,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup4">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -321,7 +321,7 @@
                                     <ul class="radio-group__list">
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup5" checked>
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -332,7 +332,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup5">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -343,7 +343,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup5">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -354,7 +354,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup5">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 
@@ -366,7 +366,7 @@
                                         </li>
                                         <li>
                                             <label class="radio radio-default">
-                                                <input type="radio" name="rgroup5">
+                                                <input type="radio" name="rgroup1">
                                                 <span class="radio-inner">
                             <span class="radio-box">
 

@@ -38,6 +38,11 @@
         <li><a href="ppk-public-catering-page.php" class="">Конфигуратор ППК Общепит</a></li>
         <li><a href="ppk-pharmacy-page.php" class="">Конфигуратор ППК Фармация</a></li>
         <li><a href="ppk-total-page.php" class="">Конфигуратор ППК Итог</a></li>
+        <li><a href="contracts-page.php" class="">Договоры</a></li>
+        <li><a href="contracts-rent-general-page.php" class="">Договор аренды общий форма</a></li>
+        <li><a href="contracts-rent-three-person-page.php" class="">Договор аренды 3 лица форма</a></li>
+        <li><a href="contracts-employment-page.php" class="">Трудовой договор форма</a></li>
+        <li><a href="contracts-paid-medical-page.php " class="">Договор платных мед услуг форма</a></li>
     </ol>
 </div>
 
