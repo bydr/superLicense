@@ -52,7 +52,7 @@
                                 <label for="id-tel-lead" class="label form-group__label">
                                     Телефон руководителя
                                 </label>
-                                <input type="tel" class="dr-form-control form-control"
+                                <input type="tel" class="dr-form-control form-control mask-tel"
                                        name="tel-lead" id="id-tel-lead" required="" placeholder=" ">
                             </div>
                             <div class="form-group">

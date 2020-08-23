@@ -172,19 +172,47 @@ $(function () {
         }
     });
 
-    let defaultClassesAlert = "alert msg-validate";
-    $('#id-password, #id-confirm-password').on('keyup', function () {
-        if ($('#id-password').val() === $('#id-confirm-password').val()) {
-            $('.msg-validate')
-                .html('Пароли совпадают')
-                .removeClass()
-                .addClass(`${defaultClassesAlert} alert-success`);
-        } else
-            $('.msg-validate')
-                .html('Пароли не совпадают')
-                .removeClass()
-                .addClass(`${defaultClassesAlert} alert-danger`);
-    });
+
+    var pass = document.querySelector('#id-password');
+    var passConfirm = document.querySelector('#id-confirm-password');
+        pass.addEventListener('keyup', function () {
+            comfirmPassword(this);
+        });
+        passConfirm.addEventListener('keyup', function () {
+            comfirmPassword(this);
+        });
+
+        function comfirmPassword(el) {
+            let elemMsgConfirmPassword = passConfirm
+                                            .closest('.form-group')
+                                            .querySelector('.form-group__message');
+
+            if(!passConfirm.validity.patternMismatch && !pass.validity.patternMismatch) {
+                if (passConfirm.value === pass.value) {
+                    elemMsgConfirmPassword
+                        .innerText = 'Пароли совпадают';
+                } else
+                    elemMsgConfirmPassword
+                        .innerText = 'Пароли не совпадают';
+            } else {
+                elemMsgConfirmPassword
+                    .innerText = passConfirm.getAttribute('title');
+            }
+        }
+
+    // $('#id-password, #id-confirm-password').on('keyup', function () {
+    //     let elemMsgConfirmPassword = $(this)
+    //                                         .closest('.form-group')
+    //                                         .find('.form-group__message');
+    //     console.log($(this).pattern, $(this), elemMsgConfirmPassword);
+    //
+    //     if ($('#id-password').val() === $('#id-confirm-password').val()) {
+    //         elemMsgConfirmPassword
+    //             .html('Пароли совпадают');
+    //     } else
+    //         elemMsgConfirmPassword
+    //             .html('Пароли не совпадают');
+    // });
 
     let content = $('.readmore-content');
     const maxHeightInitial = 1850;
@@ -322,7 +350,13 @@ $(function () {
             }
         }
     });
-    $('#id-tel-lead').mask("+0 000 000 0000", {placeholder: "+_ ___ ___ ____"});
+    $('.mask-tel').mask("+0 000 000 0000", {
+        placeholder: "+_ ___ ___ ____",
+        clearIfNotMatch: true
+    });
+    $('.mask-tel-registr').mask("+0 000 000 0000", {
+        clearIfNotMatch: true
+    });
 
     $('[data-toggle="popover"]').popover({
         template: '<div class="popover" role="tooltip"><span class="popover-close"></span><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'

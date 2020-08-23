@@ -26,8 +26,7 @@
                             <div class="form-group">
                                 <input type="tel"
                                        name="tel"
-                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                       class="dr-form-control form-control"
+                                       class="dr-form-control form-control mask-tel-registr"
                                        required
                                         placeholder="Телефон">
                             </div>
@@ -50,8 +49,9 @@
                                        id="id-password"
                                        name="password"
                                        class="dr-form-control form-control"
+                                       title="Минимум 8 символов, одна цифра, одна заглавная и одна строчная буква"
+                                       pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
                                        required
-                                       pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                                         placeholder="Пароль">
                             </div>
                             <div class="form-group">
@@ -59,11 +59,12 @@
                                        id="id-confirm-password"
                                        name="confirm-password"
                                        class="dr-form-control form-control"
+                                       title="Минимум 8 символов, одна цифра, одна заглавная и одна строчная буква"
                                        required
-                                       pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                                       pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
                                        placeholder="Повторите пароль"
                                 >
-                                <p class="alert msg-validate" role="alert"></p>
+                                <div class="form-group__message error"></div>
                             </div>
                             <div class="form-group text-center align-items-center">
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient">Создать аккаунт</button>
