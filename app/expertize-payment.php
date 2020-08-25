@@ -1,7 +1,7 @@
 <?php require_once('head.php'); ?>
 <?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
-<?php $dataImgFooter = "img/_src/frame-11.svg"; ?>
+<?php $dataImgFooter = "images/_src/frame-11.svg"; ?>
 
 <section class="section section-expertize-payment">
     <div class="container">
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <img src="img/_src/payments.png" class="max-w-400 w-100" alt="">
+                            <img src="images/_src/payments.png" class="max-w-400 w-100" alt="">
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <?php require_once('head.php'); ?>
 <?php require_once('header-cabinet.php'); ?>
 <?php require_once('params.php'); ?>
-<?php $dataImgFooter = "img/_src/frame-5.svg"; ?>
+<?php $dataImgFooter = "images/_src/frame-5.svg"; ?>
 
 
 <section class="section section-wpadding bg-accent-gradient__darken">
@@ -112,7 +112,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <img src="img/_src/frame-9.svg" alt="" class="mt-100">
+                <img src="images/_src/frame-9.svg" alt="" class="mt-100">
             </div>
         </div>
     </div>

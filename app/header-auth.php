@@ -5,7 +5,7 @@
                 <nav class="dr-navbar  navbar navbar-expand-sm d-flex align-items-center justify-content-between w-100">
                     <!-- Brand/logo -->
                     <a class="navbar-brand d-flex align-items-center c-light" href="#">
-                        <img src="img/_src/logo.png"
+                        <img src="images/_src/logo.png"
                              alt="super license"
                              title="super license"
                              class="img-responsive">

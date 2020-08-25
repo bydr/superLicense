@@ -34,7 +34,7 @@
                         <a href="#" class="dr-btn dr-btn__accent-lightest">Без медицинского образования</a>
                     </div>
                     <div class="configurator-img">
-                        <img src="img/_src/frame-10.svg" alt="">
+                        <img src="images/_src/frame-10.svg" alt="">
                     </div>
                 </div>
 

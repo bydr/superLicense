@@ -1,7 +1,7 @@
 <?php require_once('head.php'); ?>
 <?php require_once('header-auth.php'); ?>
 <?php require_once('params.php'); ?>
-<?php $dataImgFooter = "img/_src/frame-11.svg"; ?>
+<?php $dataImgFooter = "images/_src/frame-11.svg"; ?>
 
 <section class="section section-expertize">
     <div class="container">
@@ -35,7 +35,7 @@
             </div>
             <div class="col-12 col-md-6">
                 <div class="section-image">
-                    <img src="img/_src/frame-12.svg" alt="">
+                    <img src="images/_src/frame-12.svg" alt="">
                 </div>
             </div>
         </div>

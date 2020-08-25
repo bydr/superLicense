@@ -1,7 +1,7 @@
 <?php require_once('head.php'); ?>
 <?php require_once('header-cabinet.php'); ?>
 <?php require_once('params.php'); ?>
-<?php $dataImgFooter = "img/_src/frame-8.svg"; ?>
+<?php $dataImgFooter = "images/_src/frame-8.svg"; ?>
 
 
 <section class="section section-cabinet bg-accent__lightest">

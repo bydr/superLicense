@@ -38,7 +38,7 @@
 
                     </div>
                 </div>
-                <img src="img/_src/frame-13.svg" class="prav-help-img" alt="">
+                <img src="images/_src/frame-13.svg" class="prav-help-img" alt="">
             </div>
         </div>
     </div>

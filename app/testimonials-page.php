@@ -1,7 +1,7 @@
 <?php require_once('head.php'); ?>
 <?php require_once('header.php'); ?>
 <?php require_once('params.php'); ?>
-<?php $dataImgFooter = "img/_src/frame-5.svg"; ?>
+<?php $dataImgFooter = "images/_src/frame-5.svg"; ?>
 
 <section class="section section-reviews bg-overlay">
     <div class="container-fluid">

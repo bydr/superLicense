@@ -164,7 +164,7 @@
             </p>
         </div>
         <div class="text-center max-w-600">
-            <img src="img/_src/frame-10.svg" alt="">
+            <img src="images/_src/frame-10.svg" alt="">
         </div>
     </div>
 </div>

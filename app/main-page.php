@@ -1,7 +1,7 @@
 <?php require_once('head.php'); ?>
 <?php require_once('header.php'); ?>
 <?php require_once('params.php'); ?>
-<?php $dataImgFooter = "img/_src/frame-5.svg"; ?>
+<?php $dataImgFooter = "images/_src/frame-5.svg"; ?>
 
 <script>
     document.body.classList.add('bg-accent__darker');
@@ -20,7 +20,7 @@
             </div>
             <div class="col-12 col-lg-5 col-md-12">
                 <div class="section-image">
-                    <img src="img/_src/frame-1.svg" alt="">
+                    <img src="images/_src/frame-1.svg" alt="">
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                     <h2 class="headers-h3 c-accent__darken xs-responsive-block__mobile">
                         Здравствуйте! <br><br> Меня зовут Малярова Вероника Анатольевна. Я занимаюсь подготовкой пакета документов «под ключ» для последующего лицензирования медицинских и фармацевтических учреждений.
                     </h2>
-                    <img src="img/_src/person.png" alt="">
+                    <img src="images/_src/person.png" alt="">
                     <a href="#" class="label-photo dr-text__small">
                         <span>Малярова</span>
                         <span>Вероника Анатольевна</span>
@@ -83,8 +83,8 @@
             </div>
             <div class="col-12 col-lg-4 col-md-4 col-sm-12">
                 <div class="section-image">
-                    <img src="img/_src/frame-3.svg" class="max-w-250" alt="">
-                    <img src="img/_src/frame-2.svg" class="max-w-250" alt="">
+                    <img src="images/_src/frame-3.svg" class="max-w-250" alt="">
+                    <img src="images/_src/frame-2.svg" class="max-w-250" alt="">
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
             </div>
             <div class="col-12 col-sm-12 col-lg-4 col-md-4">
                 <div class="section-image">
-                    <img src="img/_src/frame-4.svg" alt="">
+                    <img src="images/_src/frame-4.svg" alt="">
                 </div>
             </div>
         </div>
