@@ -20,12 +20,28 @@
                         </button>
                         <div class="mobile-menu__drop ">
                             <div class="mobile-menu__wrapper">
-                                <div class="btn-group align-items-center d-flex justify-content-center">
-                                    <a href="authorization-page.php" id="id-btn__signin" class="dr-btn dr-text__menu c-accent__lighter">Вход</a>
-                                    <a href="registration-page.php" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>
-                                </div>
 
-                                <?php echo file_get_contents('template-parts/navbar-menu.php'); ?>
+                                <!-- кнопки вход регистрация заменены на данные пользователя -->
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a href="#" class="data-user">
+                                        <span class="icon"><span class="ic-user ic-white"></span></span>
+                                        <span class="data-user__title dr-text__small c-light"><b>Username</b></span>
+
+                                        <span class="data-user__status bage bg-orange-darken">Pro</span>
+                                        <!--                        <span class="data-user__status bage bg-orange-darken">pro</span>-->
+
+                                        <!-- изменение статуса:
+                                            для Base    - класс bg-accent-gradient__lighten
+                                            для pro     - класс bg-orange-darken
+                                        -->
+                                    </a>
+                                    <a href="#" class="dr-text__normal fw-bold ml-20 c-light">Выйти</a>
+                                </div>
+                                <!-- кнопки вход регистрация заменены на данные пользователя -->
+
+                                <!-- Меню меняется на название страницы "Личный кабинет" -->
+                                <p class="header-title-page dr-text__normal fw-bold text-center">Личный кабинет</p>
+                                <!-- Меню меняется на название страницы "Личный кабинет" -->
 
                                 <div class="btn d-flex align-items-center text-center w-100">
                                     <a href="#" class="dr-btn dr-btn__accent-gradient max-w-250 w-100">форма обратной связи</a>
@@ -33,16 +49,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- User data (if logged user) -->
-                    <!-- Данные пользвателя - единственное отличие от header.php
-                    - скрывается блок .btn-group и показывается header-user  -->
-
-<!--                    <div class="btn-group align-items-center btn-group__auth d-flex">-->
-<!--                        <a href="#" id="id-btn__signin" class="dr-btn dr-text__menu c-accent__lighter">Вход</a>-->
-<!--                        <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>-->
-<!--                    </div>-->
 
                     <div class="d-flex justify-content-center align-items-center">
                         <a href="#" class="data-user">
@@ -57,7 +63,7 @@
                                 для pro     - класс bg-orange-darken
                             -->
                         </a>
-<!--                        <a href="#" class="dr-text__normal fw-bold ml-20">Выйти</a>-->
+                        <a href="#" class="dr-text__normal fw-bold ml-20 c-light d-none d-md-flex">Выйти</a>
                     </div>
                 </nav>
             </div>
