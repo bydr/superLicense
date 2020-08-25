@@ -1,0 +1,102 @@
+@import "vars";
+
+.dr-btn {
+    appearance: none;
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01rem;
+    display: inline-flex!important;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 11px 25px;
+    margin: 10px;
+    border-radius: 50px;
+    color: $light;
+    border: none;
+    background: transparent;
+    outline: none!important;
+    cursor: pointer;
+    min-height: 50px;
+    transition: all .2s ease-in-out;
+    &:focus {
+        color: $light;
+        outline: none!important;
+    }
+    &:hover {
+        color: $light;
+    }
+
+    &-h40 {
+        min-height: 40px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    &__square {
+        border-radius: 10px;
+        padding: 5px 25px;
+    }
+    &__orange-gradient {
+        @extend .bg-orange-gradient;
+        box-shadow: $shadow-orange;
+
+        &:hover, &:focus, &:active {
+            @extend .bg-orange-gradient__darken;
+            box-shadow: $shadow-orange-hover;
+        }
+    }
+    &__accent-gradient {
+        @extend .bg-accent-gradient;
+        box-shadow: $shadow-green2;
+    }
+    &__accent-lightest {
+        background: $accent-lightest;
+        color: $accent-darker!important;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: none;
+        > * {
+            color: $accent-darker!important;
+        }
+        &:hover {
+            background: transparentize($accent-lightest, .2);
+        }
+    }
+    &__outline {
+        padding: 15px 20px;
+        background: transparent;
+        border: 3px solid $orange;
+
+        &:hover, &:focus, &:active {
+            filter: drop-shadow($shadow-orange-outline);
+        }
+    }
+    &__icon {
+        margin: 0;
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+    }
+
+    &__big {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__wicon {
+        .ic-init {
+            margin-right: 10px!important;
+        }
+    }
+
+    > * {
+        margin: 0!important;
+    }
+}

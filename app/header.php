@@ -26,7 +26,7 @@
                                     <a href="registration-page.php" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient">Регистрация</a>
                                 </div>
 
-                                <?php echo file_get_contents('template-parts/navbar-menu-mobile.php'); ?>
+                                <?php echo file_get_contents('template-parts/navbar-menu.php'); ?>
 
                                 <div class="btn d-flex align-items-center text-center w-100">
                                     <a href="#" class="dr-btn dr-btn__accent-gradient max-w-250 w-100">форма обратной связи</a>
@@ -34,11 +34,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- Login / Registration -->
-                    <!-- Данные пользвателя - единственное отличие от header.php
-                    - скрывается блок .btn-group и показывается header-user  -->
 
                     <div class="btn-group align-items-center btn-group__auth d-flex">
                         <a href="#" id="id-btn__signup" class="dr-btn dr-btn__orange-gradient dr-btn-h40">Вход / Регистрация</a>

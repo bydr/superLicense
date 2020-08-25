@@ -1,0 +1,67 @@
+$default-font: "roboto", sans-serif;
+
+$accent: #01939A;
+$accent-lighten: #34C6CD;
+$accent-lighter: #82D8DC;
+$accent-lightest: #B7FBFE;
+$accent-super-lightest: #E1FEFF;
+$accent-darken: #1D7074;
+$accent-darker: #17343E;
+
+$orange: #ff7600;
+$orange-lighten: #FF9840;
+$orange-lighter: #FFB473;
+$orange-darken: #ED6E00;
+
+$accent-gradient: linear-gradient(180deg, #34C6CD 0%, #006F74 100%);
+$accent-gradient-darken: linear-gradient(180deg, #006064 0%, #01939A 100%);
+$accent-gradient-lighten: linear-gradient(180deg, $accent-lighten 0%, rgba(101, 224, 229, 0.5) 100%);
+$orange-gradient: linear-gradient(360deg, $orange 0%, $orange-lighten 100%);
+$orange-gradient-darken: linear-gradient(360deg, $orange-darken 0%, #FF963D 100%);
+
+$carousel-gap: 200px;
+$carousel-btn-size: 40px;
+
+$text: #333;
+$shadow-orange: 0px 10px 20px rgba(237, 110, 0, 0.5);
+$shadow-orange-hover: 0px 10px 30px rgba(237, 110, 0, 0.5);
+$shadow-orange-outline: 0px 5px 10px rgba(237, 110, 0, 0.5);
+$shadow-default: 0px 8px 25px rgba(0, 96, 100, 0.1);
+$shadow-green2: 0px 15px 30px rgba(0, 96, 100, 0.3);
+$shadow-form-control: 0px 4px 10px rgba(0, 96, 100, 0.5);
+$light: #fff;
+
+$h1-fz: 48px;
+$h1-lh: 54px;
+
+$h2-fz: 36px;
+$h2-lh: 40px;
+
+$h3-fz: 26px;
+$h3-lh: 27px;
+
+$h4-fz: 24px;
+$h4-lh: 32px;
+
+$h5-fz: 14px;
+$h5-lh: 28px;
+
+$txt-logo-fz: 17px;
+$txt-logo-lh: 20px;
+
+$txt-normal-fz: 22px;
+$txt-normal-lh: 32px;
+
+$txt-small-fz: 14px;
+$txt-small-lh: 18px;
+
+$txt-menu-fz: 19px;
+$txt-menu-lh: 20px;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;

@@ -1,0 +1,102 @@
+
+.headers {
+  font-family: $default-font;
+  color: inherit;
+  margin: 0 0 20px 0;
+  padding: 0;
+  position: relative;
+
+  &-h1 {
+    @extend .headers;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $h1-fz;
+    line-height: $h1-lh;
+  }
+  &-h2 {
+    @extend .headers;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $h2-fz;
+    line-height: $h2-lh;
+  }
+  &-h3 {
+    @extend .headers;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $h3-fz;
+    line-height: $h3-lh;
+  }
+  &-h4 {
+    @extend .headers;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $h4-fz;
+    line-height: $h4-lh;
+    text-transform: none;
+  }
+  &-h5 {
+    @extend .headers;
+    font-style: italic;
+    font-weight: bold;
+    font-size: $h5-fz;
+    line-height: $h5-lh;
+  }
+}
+
+.dr-text {
+  position: relative;
+  font-family: $default-font;
+  color: $accent-darker;
+  > * {
+    display: inline-block;
+  }
+
+  &__logo {
+    color: $light;
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $txt-logo-fz;
+    line-height: $txt-logo-lh;
+    text-transform: uppercase;
+  }
+  &__normal {
+    @extend .dr-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $txt-normal-fz;
+    line-height: $txt-normal-lh;
+  }
+  &__small {
+    @extend .dr-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $txt-small-fz;
+    line-height: $txt-small-lh;
+  }
+  &__menu {
+    @extend .dr-text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $txt-menu-fz;
+    line-height: $txt-menu-lh;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    &_bold {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+    }
+    * {
+      @extend .dr-text__menu;
+    }
+  }
+  &__underline {
+    text-decoration: underline!important;
+  }
+  &__nav {
+    @extend .dr-text__normal;
+    font-weight: bold;
+  }
+}

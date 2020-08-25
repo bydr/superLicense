@@ -1,0 +1,232 @@
+@import "vars";
+
+.bg {
+  &-light {
+    background: $light;
+  }
+
+  &-accent {
+    background-color: $accent !important;
+    color: $light;
+
+    a {
+      color: $light;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &__darker {
+      background: $accent-darker;
+      color: $light;
+
+      a {
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &__lighten {
+      background: $accent-lighten;
+      color: $light;
+
+      a {
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &__lighter {
+      background: $accent-lighter;
+      color: $light;
+
+      a {
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &__lightest {
+      background: $accent-lightest;
+
+    }
+
+    &__super-lightest {
+      background: $accent-super-lightest;
+
+      > * {
+        color: $accent-darken;
+      }
+    }
+
+    &-gradient {
+      background: $accent-gradient;
+      color: $light;
+
+      &__darken {
+        background: $accent-gradient-darken !important;
+        color: $light;
+
+        a {
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+
+      &__lighten {
+        background: $accent-gradient-lighten !important;
+        color: $light;
+
+        a {
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+
+      &__darken {
+        background: $accent-darken;
+        color: $light;
+
+        a {
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  &-orange {
+    background: $orange !important;
+
+    &-gradient {
+      background: $orange-gradient !important;
+      color: $light;
+
+      a {
+        &:hover {
+          color: inherit;
+        }
+      }
+
+      &__darken {
+        background: $orange-gradient-darken !important;
+        color: $light;
+      }
+    }
+
+    &-darken {
+      background: $orange-darken;
+      color: $light;
+
+      > * {
+        color: $light;
+      }
+    }
+
+    &-lighter {
+      background: $orange-lighter;
+      color: $light;
+
+      > * {
+        color: $light;
+      }
+    }
+  }
+
+  &-overlay {
+    color: $light;
+
+    * {
+      color: $light;
+    }
+  }
+
+  &-transparent {
+    background: transparent !important;
+  }
+}
+
+.c {
+  &-accent {
+    color: $accent!important;
+
+    &__lighter {
+      color: $accent-lighter!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+
+    &__lightest {
+      color: $accent-lightest!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+
+    &__lighten {
+      color: $accent-lighten!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+
+    &__darker {
+      color: $accent-darker!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+
+    &__darken {
+      color: $accent-darken!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+  }
+
+  &-orange {
+    color: $orange;
+
+    &__lighten {
+      color: $orange-lighten;
+    }
+    &__lighter {
+      color: $orange-lighter;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    > * {
+      color: $orange;
+    }
+  }
+
+  &-light {
+    color: $light;
+    &:hover {
+      color: $light;
+    }
+  }
+
+  &-dark {
+    color: $text !important;
+  }
+}

@@ -23,23 +23,16 @@
 
                                 <!-- кнопки вход регистрация заменены на данные пользователя -->
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <a href="#" class="data-user">
+                                    <a href="#" class="data-user data-user_status_pro">
                                         <span class="icon"><span class="ic-user ic-white"></span></span>
                                         <span class="data-user__title dr-text__small c-light"><b>Username</b></span>
-
-                                        <span class="data-user__status bage bg-orange-darken">Pro</span>
-                                        <!--                        <span class="data-user__status bage bg-orange-darken">pro</span>-->
-
-                                        <!-- изменение статуса:
-                                            для Base    - класс bg-accent-gradient__lighten
-                                            для pro     - класс bg-orange-darken
-                                        -->
+                                        <span class="data-user__status bage">Pro</span>
                                     </a>
                                     <a href="#" class="dr-text__normal fw-bold ml-20 c-light">Выйти</a>
                                 </div>
                                 <!-- кнопки вход регистрация заменены на данные пользователя -->
 
-                                <?php echo file_get_contents('template-parts/navbar-menu-mobile.php'); ?>
+                                <?php echo file_get_contents('template-parts/navbar-menu.php'); ?>
 
                                 <div class="btn d-flex align-items-center text-center w-100">
                                     <a href="#" class="dr-btn dr-btn__accent-gradient max-w-250 w-100">форма обратной связи</a>
@@ -49,17 +42,10 @@
                     </div>
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="#" class="data-user">
+                        <a href="#" class="data-user data-user_status_pro">
                             <span class="icon"><span class="ic-user ic-white"></span></span>
                             <span class="data-user__title dr-text__small c-light"><b>Username</b></span>
-
-                            <span class="data-user__status bage bg-orange-darken">Pro</span>
-                            <!--                        <span class="data-user__status bage bg-orange-darken">pro</span>-->
-
-                            <!-- изменение статуса:
-                                для Base    - класс bg-accent-gradient__lighten
-                                для pro     - класс bg-orange-darken
-                            -->
+                            <span class="data-user__status bage">Pro</span>
                         </a>
                     </div>
 

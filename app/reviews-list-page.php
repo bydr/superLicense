@@ -15,7 +15,7 @@
                                 <div class="review-item__author user-data">
                                     <div class="user-data__header">
                                         <div class="user-data__avatar"
-                                             style="background-image: url(<?= $item["avatar"]; ?>)"></div>
+                                             <?php if(!is_null($item["avatar"]) && $item["avatar"] != "") { ?>style="background-image: url(<?= $item["avatar"]; ?>)"<?php } ?>></div>
                                         <div class="user-data__info">
                                             <p class="headers-h3 c-accent__darken"><?= $item["author"]; ?></p>
                                             <p class="dr-text__small c-accent__darken"><?= $item["company"]; ?></p>

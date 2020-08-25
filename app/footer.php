@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-4">
                 <!-- картинка на страницах разная, поэтому в каждом шаблоне она обьявлена -->
-                <img src="<?=$dataImgFooter; ?>" alt="">
+                <img class="footer-img" src="<?=$dataImgFooter; ?>" alt="">
             </div>
             <div class="col-12 col-sm-12 col-md-7 offset-lg-1">
                 <div class="section-content align-items-end">

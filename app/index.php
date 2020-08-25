@@ -24,7 +24,7 @@
         <li><a href="configurator-end-page.php" class="">Конфигуратор Итог.</a></li>
         <li><a href="expertize-page.php" class="">Экспертиза документов</a></li>
         <li><a href="expertize-payment.php" class="">Экспертиза документов - оплата</a></li>
-        <li><a href="testimonials-page.php" class="">Отзывы</a></li>
+        <li><a href="reviews-list-page.php" class="">Отзывы</a></li>
         <li><a href="prav-help-page.php" class="">Правовая помощь</a></li>
         <li><a href="material-page.php" class="">Материал</a></li>
         <li><a href="materials-page.php" class="">Страница материалов</a></li>
@@ -44,6 +44,7 @@
         <li><a href="contracts-employment-page.php" class="">Трудовой договор форма</a></li>
         <li><a href="contracts-paid-medical-page.php " class="">Договор платных мед услуг форма</a></li>
         <li><a href="contracts-total-page.php" class="">Договора оплата</a></li>
+        <li><a href="review-form-page.php" class="">Форма добавления отзыва</a></li>
     </ol>
 </div>
 

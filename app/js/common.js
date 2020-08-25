@@ -243,11 +243,11 @@ $(function () {
         // });
     });
 
-    /* раскрытие и скрытие service list */
-    var serviceItemBtn = $('.service-item__toggle .dr-btn');
+    /* раскрытие и скрытие service list js */
+    /* var serviceItemBtn = $('.service-item__toggle .dr-btn');
     serviceItemBtn.on('click', function (e) {
         e.preventDefault();
-        let serviceItem = this.closest('.service-item');
+        let serviceItem = $(this).closest('.service-item');
 
         let btnTextDefault = "";
         btnTextDefault = $(this).text();
@@ -266,7 +266,30 @@ $(function () {
         }
 
         window.pageYOffset -= fullInfo.scrollHeight;
+    }); */
+    /* раскрытие и скрытие service list js */
+
+    /* раскрытие и скрытие service list jquery */
+    var serviceItemBtn = $('.service-item__toggle .dr-btn');
+    serviceItemBtn.on('click', function (e) {
+        e.preventDefault();
+        let serviceItem = $(this).closest('.service-item');
+
+        let btnTextDefault = "";
+        btnTextDefault = $(this).text();
+        $(this).text($(this).attr('btnTextAlternate'));
+        $(this).attr('btnTextAlternate', btnTextDefault);
+
+        let fullInfo = serviceItem.find('.service-item__show_active');
+        if (serviceItem.hasClass("active")){
+            serviceItem.removeClass('active');
+            fullInfo.slideUp();
+        } else {
+            serviceItem.addClass('active');
+            fullInfo.slideDown();
+        }
     });
+    /* раскрытие и скрытие service list jquery */
 
     let modalBtnClose = ".dr-modal__close";
     let activeClass = "is-active";
@@ -396,26 +419,29 @@ $(function () {
 
     /*dropdown*/
     $(document).ready(function(){
-        var dropdown = $(".dropdown-header");
-        dropdown.on("click", function() {
-            $(this).closest('.dropdown').toggleClass("active");
+
+        var dropdownHeaderDesktop = $('.dr-navbar > .dr-navbar-nav .dropdown-nav');
+        var dropdownHeaderMobile = $('.mobile-menu .dropdown-nav');
+        dropdownHeaderDesktop.on('mousemove', function (e) {
+            e.preventDefault();
+            $(this).addClass('active');
+        });
+        dropdownHeaderDesktop.on('mouseout', function () {
+            $(this).removeClass('active');
         });
 
-        var dropdownHeader = $('.dropdown-nav');
-        dropdownHeader.on('click', function (e) {
+        dropdownHeaderMobile.on('click', function (e) {
             e.preventDefault();
-            let parent = $(this).closest('.dropdown-nav');
-            if (parent.hasClass("active")) {
-                parent.removeClass('active');
-            } else {
-                dropdownHeader.each(function () {
-                    console.log( $(this).closest('.dropdown-nav'));
-                    $(this).closest('.dropdown-nav').removeClass('active');
+            if (!$(this).hasClass('active')) {
+                dropdownHeaderMobile.each(function () {
+                    $(this).removeClass('active');
                 });
-
-                parent.addClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
             }
         });
+
     });
     /*dropdown*/
 
