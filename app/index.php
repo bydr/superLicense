@@ -46,6 +46,10 @@
         <li><a href="contracts-total-page.php" class="">Договора оплата</a></li>
         <li><a href="review-form-page.php" class="">Форма добавления отзыва</a></li>
     </ol>
+    <h2>Шаблоны документов</h2>
+    <ol>
+        <li><a href="docs/templates/medicine/doc_kabinet_predei_sovih_m_o.php">Медицина/Кабинет предреи__совых м_о.doc</a></li>
+    </ol>
 </div>
 
 <?php require_once('foot.php'); ?>
