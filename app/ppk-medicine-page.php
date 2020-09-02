@@ -193,9 +193,47 @@
                                 <label for="id-otd-control" class="label form-group__label">
                                     Регион (территориальный отдел управления Роспотребнадзора)
                                 </label>
-                                <input type="text" class="dr-form-control form-control"
-                                       name="otd-control" id="id-otd-control" required=""
-                                       placeholder="Ростовская область">
+<!--                                <input type="text" class="dr-form-control form-control"-->
+<!--                                       name="otd-control" id="id-otd-control" required=""-->
+<!--                                       placeholder="Ростовская область">-->
+
+                                <div class="simple-select simple-select__default simple-select__date simple-select__datetime">
+
+                                    <div class="simple-select__main form-control" tabindex="0" role="combobox" aria-expanded="false">
+                                        <input
+                                                hidden
+                                                required
+                                                type="text"
+                                                id="date"
+                                                name="date"
+                                                value="0"
+                                                data-default-value="1">
+                                        <p class="simple-select__selected"
+                                           data-placeholder="">
+                                            <button type="button" data-id="" class="tab"></button>
+                                        </p>
+                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 4.90894L4.76837e-07 0.908936L8 0.908936L4 4.90894Z" fill="#0A083A"/>
+                                        </svg>
+                                    </div>
+
+                                    <div class="simple-select__drop">
+                                        <div class="simple-select__drop-inner">
+                                            <ul class="simple-select__list" role="listbox">
+                                                <li class="simple-select__item" data-value="${val}" role="option">
+                                                    <button type="button" data-id="${val}" class="tab">${key}1</button>
+                                                </li>
+                                                <li class="simple-select__item" data-value="${val}" role="option">
+                                                    <button type="button" data-id="${val}" class="tab">${key}2</button>
+                                                </li>
+                                                <li class="simple-select__item" data-value="${val}" role="option">
+                                                    <button type="button" data-id="${val}" class="tab">${key}3</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
