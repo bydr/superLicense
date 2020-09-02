@@ -47,13 +47,13 @@
             </div>
         </div>
         <h3 class="headers-h3 mt-30">Высшее образование</h3>
-        <div class="list-content__wrapper list-selection list-selection-js">
+        <div class="education_higher list-content__wrapper list-selection list-selection-js">
            <?php foreach($data['education']['higher'] as $item) : ?>
                 <div class="list-selection__item"><span class="list-selection__item-inner"><?=$item; ?>&nbsp;→</span></div>
             <?php endforeach; ?>
         </div>
         <h3 class="headers-h3 mt-30">Среднее образование</h3>
-        <div class="list-content__wrapper list-selection list-selection-js">
+        <div class="education_secondary list-content__wrapper list-selection list-selection-js">
             <?php foreach($data['education']['middle'] as $item) : ?>
                 <div class="list-selection__item"><span class="list-selection__item-inner"><?=$item; ?>&nbsp;→</span></div>
             <?php endforeach; ?>

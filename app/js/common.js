@@ -33,24 +33,29 @@ $(function () {
     let listItems = $('.list-selection-js .list-selection__item');
     let listItemSelected = ".list-selection__item-selected";
 
-    listItems.on('click', function () {
-        if ($(this).hasClass('selected')) {
-            return;
-        }
+    listItems.on('click', function (e) {
+            if ($(this).hasClass('selected')) {
+                if ($(this).is(e.target) // если клик был по нашему блоку
+                    && $(this).has(e.target).length === 0) { // и не по его дочерним элементам
+                    $(this)
+                        .removeClass('selected')
+                        .find(listItemSelected).remove();
+                }
+            } else {
+                let itemValue = $(this).find('.list-selection__item-inner').text().replace("→", "");
 
-        $(this)
-            .closest('.list-selection-js')
-            .find('.list-selection__item').removeClass('selected')
-            .find(listItemSelected).remove();
+                // для каждого вида обучения (среднее, высшее) разный стаж
+                if ($(this).closest('.list-selection-js').hasClass('education_higher')) {
+                    $(this).append(getSectionSelectedItem(itemValue, 5));
+                } else {
+                    $(this).append(getSectionSelectedItem(itemValue, 3));
+                }
 
-        let itemValue = $(this).find('.list-selection__item-inner').text().replace("→", "");
-        $(this).append(getSectionSelectedItem(itemValue));
-        $(this).addClass('selected');
-
-
+                $(this).addClass('selected');
+            }
     });
 
-    function getSectionSelectedItem(value) {
+    function getSectionSelectedItem(value, experience) {
         return `
         <div class="list-selection__item-selected bg-accent__darker">
             <p class="list-selection__selected-title dr-text__normal mb-0"><b>${value}</b></p>
@@ -90,7 +95,7 @@ $(function () {
 
 
                         </span>
-                        <span class="checkbox-text dr-text__small">Стаж 3 года</span>
+                        <span class="checkbox-text dr-text__small">Стаж ${experience} года</span>
                     </span>
                 </label>
             </div>
