@@ -61,7 +61,7 @@ $(function () {
             <p class="list-selection__selected-title dr-text__normal mb-0"><b>${value}</b></p>
             <div class="dr-btn-group">
                 <label class="checkbox checkbox-btn">
-                    <input type="checkbox" class="check-certificate" checked>
+                    <input type="checkbox" class="check-certificate">
                     <span class="checkbox-inner">
                         <span class="checkbox-box">
                         
