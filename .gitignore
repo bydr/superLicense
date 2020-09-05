@@ -1,0 +1,14 @@
+/node_modules/
+/dist/
+/.git/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
+/gulpfile.js
+/package.json
+/readme.md
+/.gitignore
+/.bowerrc
+/app/sass/
+/app/libs/
