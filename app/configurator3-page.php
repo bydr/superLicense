@@ -48,15 +48,51 @@
         </div>
         <h3 class="headers-h3 mt-30">Высшее образование</h3>
         <div class="education_higher list-content__wrapper list-selection list-selection-js">
-           <?php foreach($data['education']['higher'] as $item) : ?>
-                <div class="list-selection__item"><span class="list-selection__item-inner"><?=$item; ?>&nbsp;→</span></div>
-            <?php endforeach; ?>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <?php
+                $arrayLength = count($data['education']['higher']);
+                $countInColumn = round($arrayLength / 3, 0);
+                $i = 0;
+                foreach($data['education']['higher'] as $item) : ?>
+                <?php if ($i / $countInColumn != 1) { ?>
+                    <div class="list-selection__item">
+                        <span class="list-selection__item-inner">
+                            <?=$item; ?>&nbsp;→
+                        </span>
+                    </div>
+                <?php } else {  ?>
+                <?php $i = 0; ?>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <?php }
+                $i++;
+                ?>
+                <?php endforeach; ?>
+            </div>
         </div>
         <h3 class="headers-h3 mt-30">Среднее образование</h3>
         <div class="education_secondary list-content__wrapper list-selection list-selection-js">
-            <?php foreach($data['education']['middle'] as $item) : ?>
-                <div class="list-selection__item"><span class="list-selection__item-inner"><?=$item; ?>&nbsp;→</span></div>
+            <div class="col-12 col-sm-6 col-lg-4">
+            <?php
+            $arrayLength = count($data['education']['middle']);
+            $countInColumn = round($arrayLength / 3, 0);
+            $i = 0;
+            foreach($data['education']['middle'] as $item) : ?>
+                <?php if ($i / $countInColumn != 1) { ?>
+                    <div class="list-selection__item">
+                        <span class="list-selection__item-inner">
+                            <?=$item; ?>&nbsp;→
+                        </span>
+                    </div>
+                <?php } else {  ?>
+                <?php $i = 0; ?>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                <?php }
+                    $i++;
+                ?>
             <?php endforeach; ?>
+            </div>
         </div>
         <div class="text-center mt-100 pb-90">
             <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>

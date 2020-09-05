@@ -183,8 +183,14 @@
                                                    placeholder="Иванов Иван Иванович, директор, 8-999-777-0000">
                                         </div>
                                         <div class="controls-added__btn">
-                                            <p class="dr-text__small">добавить</p>
-                                            <button type="button" class="dr-btn bg-orange-lighter dr-btn__square"><span class="headers-h2">+</span></button>
+                                            <div class="controls-btn_add">
+                                                <p class="dr-text__small">добавить</p>
+                                                <button type="button" class="dr-btn dr-btn__square"><span class="headers-h2">+</span></button>
+                                            </div>
+                                            <div class="controls-btn_remove">
+                                                <p class="dr-text__small">удалить</p>
+                                                <button type="button" class="dr-btn dr-btn__circle"><span class="headers-h2">—</span></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -46,10 +46,15 @@ body, html {
   input, textarea {
     border: 2px solid transparent;
     outline: none;
-
+    color: $accent-darker;
 
     &:invalid:not(:focus):not(:placeholder-shown) {
       background: $orange-lighter;
+      color: $accent-darker;
+
+      &::placeholder {
+        color: $accent-darker;
+      }
 
       ~ .form-group__message {
         opacity: 1;
@@ -399,6 +404,10 @@ a, a:hover {
 
   &-material {
     padding-top: 85px;
+  }
+
+  &-website-sections {
+    background: $accent-lightest;
   }
 }
 
@@ -1134,6 +1143,20 @@ $border-radius-modal: 20px;
         position: relative;
       }
     }
+    input, textarea {
+      background: $orange-lighter;
+      color: $accent-darker;
+
+      &::placeholder {
+        color: $accent-darker;
+      }
+    }
+  }
+
+  &.has-success {
+    input, textarea {
+      background: $accent-lightest;
+    }
   }
 }
 
@@ -1294,6 +1317,14 @@ $border-radius-modal: 20px;
   }
 }
 
+.license-cost {
+  text-align: right;
+
+  > *:not(:last-child) {
+    margin-bottom: 5px!important;
+  }
+}
+
 .configurator{
   &-btns {
     display: flex;
@@ -1395,10 +1426,14 @@ $border-radius-modal: 20px;
 }
 
 .list-selection {
-  column-count: 3;
+  //column-count: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 50px;
   padding-left: 0;
-
+  margin-left: -15px;
+  margin-right: -15px;
 
   &__item {
     position: relative;
@@ -1408,12 +1443,11 @@ $border-radius-modal: 20px;
     font-family: 'montserrat', sans-serif;
     font-weight: normal;
     margin-bottom: 5px;
-    //overflow: hidden; /* Fix for firefox and IE 10-11  */
-    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-    page-break-inside: avoid; /* Firefox */
-    break-inside: avoid; /* IE 10+ */
-    break-inside: avoid-column;
     text-align: left;
+
+    &__close {
+      @extend .popover-close;
+    }
 
     &.is-active {
       font-weight: bold;
@@ -1440,7 +1474,7 @@ $border-radius-modal: 20px;
     }
 
     &-selected {
-      padding: 8px 10px 5px 10px;
+      padding: 8px 20px 5px 10px;
       border-radius: 10px;
       width: 100%;
       opacity: 0;
@@ -1859,7 +1893,7 @@ $border-radius-modal: 20px;
   &__header {
     margin-right: 15px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     width: 100%;
   }
@@ -2219,9 +2253,44 @@ $border-radius-modal: 20px;
     width: 100%;
     display: flex;
     align-items: center;
+    margin: 0 0 20px 0;
+
+    &:last-child {
+      margin: 0;
+    }
 
     > * {
       padding: 20px 0 0 0;
+    }
+
+    .controls-btn {
+      &_remove {
+        display: block;
+
+        .dr-btn {
+          @extend .bg-orange-darken;
+          box-shadow: 0px 4px 10px rgba(0, 96, 100, 0.5);
+        }
+      }
+      &_add {
+        display: none;
+
+
+        .dr-btn {
+          @extend .bg-accent-gradient__lighten;
+        }
+      }
+    }
+
+    &_original {
+      .controls-btn {
+        &_remove {
+          display: none;
+        }
+        &_add {
+          display: block;
+        }
+      }
     }
   }
 
@@ -2240,13 +2309,20 @@ $border-radius-modal: 20px;
 
     > * {
       width: 100%;
-    }
-    > p {
-      margin: 0;
-      position: absolute;
-      top: 0;
       text-align: center;
+
+      > p {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        text-align: center;
+      }
+
+      > * {
+        width: 100%;
+      }
     }
+
     .dr-btn {
       margin: 0;
     }
@@ -2523,6 +2599,23 @@ $border-radius-modal: 20px;
     }
     &-list {}
   }
+}
+
+.list-selection__item.selected .list-selection__item-selected {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.list-selection__item.selected .list-selection__item-inner {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.list-selection__item {
+  width: 100%;
 }
 
 

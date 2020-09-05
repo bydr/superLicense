@@ -29,7 +29,7 @@
                                             Это конфигуратор, который будет пошагово двигать вас к своей лицензии.
                                         </p>
                                     </div>
-                                    <div class="panel-footer d-flex align-items-center justify-content-md-between justify-content-center w-100">
+                                    <div class="panel-footer d-flex align-items-center justify-content-between w-100">
                                         <a href="#" class="dr-btn dr-btn__orange-gradient ">начать</a>
                                         <div class="license-cost d-flex align-items-end flex-column">
                                             <p class="dr-text__small c-accent__darken mb-0"><b>Стоимость услуги</b></p>
@@ -52,7 +52,7 @@
                                             Это конфигуратор, который будет пошагово двигать вас к своей лицензии.
                                         </p>
                                     </div>
-                                    <div class="panel-footer d-flex align-items-center justify-content-md-between justify-content-center w-100">
+                                    <div class="panel-footer d-flex align-items-center justify-content-between w-100">
                                         <a href="#" class="dr-btn dr-btn__orange-gradient ">начать</a>
                                         <div class="license-cost d-flex align-items-end flex-column">
                                             <p class="dr-text__small c-accent__darken mb-0"><b>Стоимость услуги</b></p>
@@ -80,7 +80,7 @@
                                             Это конфигуратор, который будет пошагово двигать вас к своей лицензии.
                                         </p>
                                     </div>
-                                    <div class="panel-footer d-flex align-items-center justify-content-md-between justify-content-center w-100">
+                                    <div class="panel-footer d-flex align-items-center justify-content-between w-100">
                                         <a href="#" class="dr-btn dr-btn__orange-gradient ">начать</a>
                                         <div class="license-cost d-flex align-items-end flex-column">
                                             <p class="dr-text__small c-accent__darken mb-0"><b>Стоимость услуги</b></p>
@@ -103,7 +103,7 @@
                                             Это конфигуратор, который будет пошагово двигать вас к своей лицензии.
                                         </p>
                                     </div>
-                                    <div class="panel-footer d-flex align-items-center justify-content-md-between justify-content-center w-100">
+                                    <div class="panel-footer d-flex align-items-center justify-content-between w-100">
                                         <a href="#" class="dr-btn dr-btn__orange-gradient ">начать</a>
                                         <div class="license-cost d-flex align-items-end flex-column">
                                             <p class="dr-text__small c-accent__darken mb-0"><b>Стоимость услуги</b></p>

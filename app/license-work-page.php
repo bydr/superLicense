@@ -70,7 +70,7 @@
                                 Это конфигуратор, который будет пошагово двигать вас к своей лицензии.
                             </p>
                         </div>
-                        <div class="panel-footer d-flex align-items-center justify-content-md-between justify-content-center w-100">
+                        <div class="panel-footer d-flex align-items-center justify-content-between w-100">
                             <a href="#" class="dr-btn dr-btn__orange-gradient">начать и оплатить</a>
                             <div class="license-cost d-flex align-items-end flex-column">
                                 <p class="dr-text__small c-accent__darken mb-0"><b>Стоимость услуги</b></p>
@@ -83,15 +83,15 @@
                             <div class="panel-icon__wrapper">
                                 <div class="panel-icon"><span class="ic-file-text"></span></div>
                             </div>
-                            <p class="dr-text__small c-accent__darker mb-0"><b>конфигуратор 1</b></p>
-                            <p class="headers-h2">Первая лицензия</p>
+                            <p class="dr-text__small c-accent__darker mb-0"><b>конфигуратор 2</b></p>
+                            <p class="headers-h2">Переоформление действующих лицензий</p>
                         </div>
                         <div class="panel-body c-accent__darker">
                             <p class="dr-text__normal">
-                                Это конфигуратор, который будет пошагово двигать вас к своей лицензии.
+                                У вас изменился адрес или нужно добавить новые виды деятельности.
                             </p>
                         </div>
-                        <div class="panel-footer d-flex align-items-center justify-content-md-between justify-content-center w-100">
+                        <div class="panel-footer d-flex align-items-center justify-content-between w-100">
                             <a href="#" class="dr-btn dr-btn__orange-gradient">начать и оплатить</a>
                             <div class="license-cost d-flex align-items-end flex-column">
                                 <p class="dr-text__small c-accent__darken mb-0"><b>Стоимость услуги</b></p>

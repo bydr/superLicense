@@ -302,21 +302,6 @@
     }
   }
 
-  .panel-footer {
-    flex-direction: column !important;
-  }
-  .license-cost {
-    margin-top: 30px;
-    flex-direction: row !important;
-
-    > * {
-      margin-right: 10px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
   .list-selection {
     column-count: 1;
   }
@@ -342,9 +327,6 @@
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     }
   }
-  .panel-footer>.dr-btn:first-child {
-    margin-left: auto;
-  }
 
   .configurator {
 
@@ -368,6 +350,12 @@
 @include media-breakpoint-up(md) {
   .radio-group__item .radio-group {
     padding: 0 20px;
+  }
+
+  .header {
+    .btn-cabinet-exit {
+      display: none!important;
+    }
   }
 }
 

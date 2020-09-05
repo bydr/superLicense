@@ -32,32 +32,41 @@ $(function () {
     /* выбор элемент из списка  (образование) */
     let listItems = $('.list-selection-js .list-selection__item');
     let listItemSelected = ".list-selection__item-selected";
+    let listItemClose = ".list-selection__item__close";
 
+    $('body').on('click', ".list-selection__item__close", function () {
+        $(this)
+            .closest('.list-selection__item')
+            .removeClass('selected')
+            .css('padding-bottom', 0)
+            .find(listItemSelected).remove();
+    });
     listItems.on('click', function (e) {
-            if ($(this).hasClass('selected')) {
-                if ($(this).is(e.target) // если клик был по нашему блоку
-                    && $(this).has(e.target).length === 0) { // и не по его дочерним элементам
-                    $(this)
-                        .removeClass('selected')
-                        .find(listItemSelected).remove();
-                }
+        if (!$(this).hasClass('selected')) {
+            let itemValue = $(this).find('.list-selection__item-inner').text().replace("→", "");
+
+            // для каждого вида обучения (среднее, высшее) разный стаж
+            if ($(this).closest('.list-selection-js').hasClass('education_higher')) {
+                $(this).append(getSectionSelectedItem(itemValue, 5));
             } else {
-                let itemValue = $(this).find('.list-selection__item-inner').text().replace("→", "");
-
-                // для каждого вида обучения (среднее, высшее) разный стаж
-                if ($(this).closest('.list-selection-js').hasClass('education_higher')) {
-                    $(this).append(getSectionSelectedItem(itemValue, 5));
-                } else {
-                    $(this).append(getSectionSelectedItem(itemValue, 3));
-                }
-
-                $(this).addClass('selected');
+                $(this).append(getSectionSelectedItem(itemValue, 3));
             }
+
+            $(this).css('padding-bottom',
+                `${
+                $(this).find('.list-selection__item-selected').outerHeight() 
+                - 
+                $(this).find('.list-selection__item-inner').outerHeight()
+                }px`);
+
+            $(this).addClass('selected');
+        }
     });
 
-    function getSectionSelectedItem(value, experience) {
+    function getSectionSelectedItem(value, experience = 3) {
         return `
         <div class="list-selection__item-selected bg-accent__darker">
+            <span class="list-selection__item__close"></span>
             <p class="list-selection__selected-title dr-text__normal mb-0"><b>${value}</b></p>
             <div class="dr-btn-group">
                 <label class="checkbox checkbox-btn">
@@ -95,7 +104,10 @@ $(function () {
 
 
                         </span>
-                        <span class="checkbox-text dr-text__small">Стаж ${experience} года</span>
+                        <span class="checkbox-text dr-text__small">
+                        Стаж ${experience} 
+                        ${(experience === 3)?'года':'лет'}
+                        </span>
                     </span>
                 </label>
             </div>
@@ -157,7 +169,11 @@ $(function () {
 
     // $('.owl-carousel').owlCarousel();
 
-    $('.review-carousel').owlCarousel({
+    var carouselReview = $('.review-carousel');
+    carouselReview.on('initialize.owl.carousel initialized.owl.carousel', function (event) {
+        reviewCountShow($(this), event);
+    });
+    carouselReview.owlCarousel({
         center: true,
         loop: false,
         margin: 60,
@@ -176,7 +192,15 @@ $(function () {
             }
         }
     });
-
+    carouselReview.on('changed.owl.carousel', function(event) {
+        reviewCountShow($(this), event);
+    });
+    function reviewCountShow(el, e) {
+        el
+            .closest('.review-carousel__wrapper')
+            .find('.review-carousel__pages')
+            .html(`${e.item.index + 1} из ${e.item.count}`)
+    }
 
     var pass = document.querySelector('#id-password');
     var passConfirm = document.querySelector('#id-confirm-password');
@@ -374,17 +398,15 @@ $(function () {
     });
     $('.mask-date').mask('00.00.0000', {
         placeholder: '__ . __ . ____',
+        clearIfNotMatch: true,
         translation: {
             0: {
                 pattern: /[0-9]/
             }
         }
     });
-    $('.mask-tel').mask("+0 000 000 0000", {
+    $('.mask-tel, .mask-tel-registr').mask("+0 000 000 0000", {
         placeholder: "+_ ___ ___ ____",
-        clearIfNotMatch: true
-    });
-    $('.mask-tel-registr').mask("+0 000 000 0000", {
         clearIfNotMatch: true
     });
 
@@ -450,17 +472,26 @@ $(function () {
     });
     /*dropdown*/
 
-    $('.controls-added__btn').on('click', function () {
-        let addedElement =`<div class="controls-added__row"><div class="controls-added__element">${$(this)
+    $('body').on('click', '.controls-btn_add', function () {
+        addControlsRow($(this));
+    });
+    $('body').on('click', '.controls-btn_remove', function () {
+        removeControlsRow($(this));
+    });
+
+    function addControlsRow(element) {
+        let addedElement =`<div class="controls-added__row">
+            ${element
             .closest('.controls-added__row_original')
-            .find('.controls-added__element')
-            .html()}</div></div>`;
-        $(this)
+            .html()}</div>`;
+        element
             .closest('.controls-added')
             .append(addedElement);
-    })
-
-
+        $('.controls-added__row:not(.controls-added__row_original):last-child').find('.controls-btn_add').remove();
+    }
+    function removeControlsRow(element) {
+        element.closest('.controls-added__row').remove();
+    }
 
     /* кастомный select */
     $(function () {

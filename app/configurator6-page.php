@@ -18,11 +18,29 @@
                 </div>
             </div>
         </div>
-        <ol class="list-content__wrapper list-content__numeric list-selection list-regions list-selection-js-custom">
-            <?php foreach ($data['regions'] as $item) : ?>
-                <li class="list-selection__item"><span class="list-selection__item-inner"><?= $item; ?></span></li>
-            <?php endforeach; ?>
-        </ol>
+        <div class="list-content__wrapper list-content__numeric list-selection list-regions list-selection-js-custom">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <?php
+                $arrayLength = count($data['regions']);
+                $countInColumn = round($arrayLength / 3, 0);
+                $i = 0;
+                foreach($data['regions'] as $item) : ?>
+                <?php if ($i / $countInColumn != 1) { ?>
+                    <div class="list-selection__item">
+                        <span class="list-selection__item-inner">
+                            <?=$item; ?>&nbsp;→
+                        </span>
+                    </div>
+                <?php } else {  ?>
+                <?php $i = 0; ?>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <?php }
+                $i++;
+                ?>
+                <?php endforeach; ?>
+            </div>
+        </div>
         <div class="text-center mt-100">
             <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400 mb-100">Дальше</a>
         </div>
