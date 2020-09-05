@@ -203,7 +203,7 @@
 <!--                                       name="otd-control" id="id-otd-control" required=""-->
 <!--                                       placeholder="Ростовская область">-->
 
-                                <div class="simple-select simple-select__default simple-select__date simple-select__datetime">
+                                <div class="simple-select simple-select__default">
 
                                     <div class="simple-select__main form-control" tabindex="0" role="combobox" aria-expanded="false">
                                         <input
@@ -216,10 +216,10 @@
                                                 data-default-value="1">
                                         <p class="simple-select__selected"
                                            data-placeholder="">
-                                            <button type="button" data-id="" class="tab"></button>
+                                            <button type="button" data-id="${val}" class="tab">${key}1</button>
                                         </p>
-                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 4.90894L4.76837e-07 0.908936L8 0.908936L4 4.90894Z" fill="#0A083A"/>
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.59045 9.7511L12.5905 15.7511L18.5905 9.7511" stroke="#006064" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </div>
 

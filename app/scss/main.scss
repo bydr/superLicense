@@ -1435,6 +1435,7 @@ $border-radius-modal: 20px;
   margin-left: -15px;
   margin-right: -15px;
 
+
   &__item {
     position: relative;
     cursor: pointer;
@@ -1444,10 +1445,12 @@ $border-radius-modal: 20px;
     font-weight: normal;
     margin-bottom: 5px;
     text-align: left;
+    width: 100%;
 
     &__close {
       @extend .popover-close;
     }
+
 
     &.is-active {
       font-weight: bold;
@@ -1495,18 +1498,20 @@ $border-radius-modal: 20px;
 
     &.selected {
       .list-selection__item-inner {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
       }
       .list-selection__item-selected {
-        position: relative;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
       }
     }
-
 
   }
 
@@ -2478,15 +2483,19 @@ $border-radius-modal: 20px;
   position: relative;
   cursor: pointer;
   width: 100%;
+  outline: none!important;
 
   * {
+    outline: none!important;
   }
+
   &.is-active {
     .simple-select__drop {
       opacity: 1;
       visibility: visible;
       -webkit-transform: translateY(0);
       transform: translateY(0);
+      z-index: 0;
     }
     .simple-select__main svg {
       -webkit-transform: rotate(180deg);
@@ -2494,10 +2503,12 @@ $border-radius-modal: 20px;
     }
   }
   &__selected {
+    @extend .dr-text__normal;
     margin: 0;
     padding: 0;
 
     > * {
+      @extend .dr-text__normal;
       margin: 0;
       padding: 0;
       border: 0;
@@ -2505,13 +2516,11 @@ $border-radius-modal: 20px;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      font-style: normal;
-      font-weight: 500;
-      text-align: left;
     }
   }
 
   &__main {
+    @extend .dr-form-control;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2521,9 +2530,18 @@ $border-radius-modal: 20px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    background: $light;
+    color: $accent-lighter;
+    position: relative;
+    z-index: 1;
+
+    * {
+      color: inherit;
+    }
 
     svg {
-      width: 10px;
+      width: 24px;
+      height: 24px;
       margin-left: 15px;
       transition: all .2s ease;
       -webkit-transition: all .2s ease;
@@ -2532,7 +2550,8 @@ $border-radius-modal: 20px;
     }
   }
   &__drop {
-    background: #fff;
+    background: $accent-gradient;
+    color: $light;
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
     position: absolute;
@@ -2544,16 +2563,15 @@ $border-radius-modal: 20px;
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
     -o-transition: all .2s ease;
-    z-index: 5;
-    //border-radius: $border-radius-btn;
+    z-index: -1;
     overflow: hidden auto;
     max-height: 280px;
-    -webkit-box-shadow: 0 10px 20px rgba(161,172,188,0.4);
-    box-shadow: 0 10px 20px rgba(161,172,188,0.4);
+    box-shadow: none;
+    border-radius: 0 0 10px 10px;
+    margin-top: -10px;
 
-    &-inner {}
     ul {
-      padding: 0;
+      padding: 10px 0 0 0;
       margin: 0;
       list-style: none;
     }
@@ -2563,6 +2581,7 @@ $border-radius-modal: 20px;
     padding: 0;
 
     > * {
+      @extend .dr-text__normal;
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
       appearance: none !important;
@@ -2571,52 +2590,32 @@ $border-radius-modal: 20px;
       font-style: normal;
       text-align: left;
       padding: 10px 12px;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 19px;
       transition: all .2s ease;
       -webkit-transition: all .2s ease;
       -moz-transition: all .2s ease;
       -o-transition: all .2s ease;
       border: 0;
-      color: $accent;
+      color: $light;
+    }
+
+    &:hover {
+      background: transparentize($light, .7);
     }
     &.is-active {
       pointer-events: none;
       cursor: default;
-      > * {
-        color: $accent;
-        //background: transparentize($accent, .9);
+      background: $accent-darken;
+
+      * {
+        color: inherit;
         pointer-events: none;
         cursor: default;
       }
-      &:hover {
-        background: #fff;
-      }
     }
-    &:hover {
-      //background: $extraLightGray;
-    }
-    &-list {}
   }
 }
 
-.list-selection__item.selected .list-selection__item-selected {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-}
 
-.list-selection__item.selected .list-selection__item-inner {
-  opacity: 1;
-  visibility: visible;
-  position: relative;
-}
-
-.list-selection__item {
-  width: 100%;
-}
 
 
 @import "media"; // Always at the end
