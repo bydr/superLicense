@@ -2495,7 +2495,7 @@ $border-radius-modal: 20px;
       visibility: visible;
       -webkit-transform: translateY(0);
       transform: translateY(0);
-      z-index: 0;
+      z-index: 2;
     }
     .simple-select__main svg {
       -webkit-transform: rotate(180deg);
@@ -2533,7 +2533,7 @@ $border-radius-modal: 20px;
     background: $light;
     color: $accent-lighter;
     position: relative;
-    z-index: 1;
+    z-index: 3;
 
     * {
       color: inherit;

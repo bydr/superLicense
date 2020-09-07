@@ -47,8 +47,57 @@
         <li><a href="review-form-page.php" class="">Форма добавления отзыва</a></li>
     </ol>
     <h2>Шаблоны документов</h2>
+    <h2>ППК Медицина</h2>
     <ol>
-        <li><a href="docs/templates/medicine/doc_kabinet_predei_sovih_m_o.php">Медицина/Кабинет предреи__совых м_о.doc</a></li>
+        <li><a href="docs/templates/ppk/medicine/doc_kabinet_predei_sovih_m_o.html">Медицина/Кабинет предреи__совых м_о.doc</a></li>
+        <li><a href="docs/templates/ppk/medicine/косметология%20с%20использованием%20лазеров.html">косметология с использованием лазеров</a></li>
+        <li><a href="docs/templates/ppk/medicine/косметология%20без%20использования%20лазеров.html">косметология без использования лазеров</a></li>
+        <li><a href="docs/templates/ppk/medicine/массаж.html">массаж</a></li>
+        <li><a href="docs/templates/ppk/medicine/мед%20центр.html">мед центр</a></li>
+        <li><a href="docs/templates/ppk/medicine/Мед%20центр%20с%20лабораториеи__.html">Мед центр с лабораториеи__</a></li>
+        <li><a href="docs/templates/ppk/medicine/Мед центр со стационаром.html">Мед центр со стационаром</a></li>
+        <li><a href="docs/templates/ppk/medicine/офтальмология.html">офтальмология</a></li>
+        <li><a href="docs/templates/ppk/medicine/стоматология.html">стоматология</a></li>
+    </ol>
+    <h2>ППК ИИИ</h2>
+    <ol>
+        <li><a href="docs/templates/ppk/ionizing_radiation/ППК ИИИ Ветклиника.html">ППК ИИИ Ветклиника</a></li>
+        <li><a href="docs/templates/ppk/ionizing_radiation/ППК ИИИ Стоматология.html">ППК ИИИ Стоматология</a></li>
+        <li><a href="docs/templates/ppk/ionizing_radiation/ППК по ИИИ.html">ППК по ИИИ</a></li>
+    </ol>
+    <h2>ППК Фармация</h2>
+    <ol>
+        <li><a href="docs/templates/ppk/pharmacy/Аптека.html">Аптека</a></li>
+        <li><a href="docs/templates/ppk/pharmacy/Аптека производственная.html">Аптека производственная</a></li>
+        <li><a href="docs/templates/ppk/pharmacy/Ветеринарная Аптека.html">Ветеринарная Аптека</a></li>
+        <li><a href="docs/templates/ppk/pharmacy/Оптика.html">Оптика</a></li>
+        <li><a href="docs/templates/ppk/pharmacy/Фармсклад.html">Фармсклад</a></li>
+    </ol>
+    <h2>ППК Общепит</h2>
+    <ol>
+        <li><a href="docs/templates/ppk/public_catering/Бар.html">Бар</a></li>
+        <li><a href="docs/templates/ppk/public_catering/временные организации быстрого обслуживания(шаурма).html">временные организации быстрого обслуживания(шаурма)</a></li>
+        <li><a href="docs/templates/ppk/public_catering/временные организации общепита.html">временные организации общепита</a></li>
+        <li><a href="docs/templates/ppk/public_catering/закусочная, работающая на сырье.html">закусочная, работающая на сырье</a></li>
+        <li><a href="docs/templates/ppk/public_catering/закусочная с приготовлением из полуфабрикатов.html">закусочная с приготовлением из полуфабрикатов</a></li>
+        <li><a href="docs/templates/ppk/public_catering/Кафе.html">Кафе</a></li>
+        <li><a href="docs/templates/ppk/public_catering/ресторан.html">ресторан</a></li>
+        <li><a href="docs/templates/ppk/public_catering/столовая.html">столовая</a></li>
+    </ol>
+    <h2>ППК Разное</h2>
+    <ol>
+        <li><a href="docs/templates/ppk/other/парикмахерская.html">парикмахерская</a></li>
+        <li><a href="docs/templates/ppk/other/ППК МБДОУ (пищеблок, бассеи__н)_1.html">ППК МБДОУ (пищеблок, бассеи__н)_1</a></li>
+        <li><a href="docs/templates/ppk/other/ППК МБДОУ _пищеблок_.html">ППК МБДОУ _пищеблок_</a></li>
+        <li><a href="docs/templates/ppk/other/ППК  (бассеи__н).html">ППК  (бассеи__н)</a></li>
+        <li><a href="docs/templates/ppk/other/продовольственныи__ магазин 1.html">продовольственныи__ магазин 1</a></li>
+        <li><a href="docs/templates/ppk/other/продовольственныи__ склад.html">продовольственныи__ склад</a></li>
+    </ol>
+    <h2>Договоры</h2>
+    <ol>
+        <li><a href="docs/templates/contracts/Договор аренды двое собственников медицина.html">Договор аренды двое собственников медицина</a></li>
+        <li><a href="docs/templates/contracts/Договор аренды двое  собственников аптека.html">Договор аренды двое  собственников аптека</a></li>
+        <li><a href="docs/templates/contracts/Договор на платные услуги.html">Договор на платные услуги</a></li>
     </ol>
 </div>
 

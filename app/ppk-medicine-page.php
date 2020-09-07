@@ -154,6 +154,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label for="id-ogrn" class="label form-group__label">
                                     ОГРН (ОГРНИП)
@@ -199,9 +200,9 @@
                                 <label for="id-otd-control" class="label form-group__label">
                                     Регион (территориальный отдел управления Роспотребнадзора)
                                 </label>
-<!--                                <input type="text" class="dr-form-control form-control"-->
-<!--                                       name="otd-control" id="id-otd-control" required=""-->
-<!--                                       placeholder="Ростовская область">-->
+                                <!--                                <input type="text" class="dr-form-control form-control"-->
+                                <!--                                       name="otd-control" id="id-otd-control" required=""-->
+                                <!--                                       placeholder="Ростовская область">-->
 
                                 <div class="simple-select simple-select__default">
 
