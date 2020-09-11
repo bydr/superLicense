@@ -361,27 +361,35 @@ $(function () {
         $(timerBlock).html(TIMER_DELETE_ACCOUNT);
     });
 
-    $('#btn_deleteAccount').on('click', function () {
+    // $('#btn_deleteAccount').on('click', function () {
+    //     startTimerSeconds();
+    // });
+    // $('a[data-modal="modal_thanks"]').on('click', function () {
+    //     startTimerSeconds();
+    // });
+
+    $('.modal-cancel').on('click', function () {
+        setTimeout(function () {
+            clearTimer(timerSeconds);
+        }, 200);
+    });
+
+    function startTimerSeconds(callbackFunc) {
         var index = TIMER_DELETE_ACCOUNT;
         timerSeconds = setInterval(function () {
             $(timerBlock).html(index--);
             if (index < 0) {
                 clearTimer(timerSeconds);
+                callbackFunc();
             }
         }, 1000);
-
-    });
-
-    $('.modal-cancel').on('click', function () {
-        setTimeout(function () {
-            clearTimer(timerSeconds);
-        }, 200)
-    });
+    }
 
     function clearTimer(timer) {
         clearInterval(timer);
         $(timerBlock).html(TIMER_DELETE_ACCOUNT);
     }
+
 
     $('.radio-group__masonry').masonry({
         // options
@@ -573,4 +581,23 @@ $(function () {
             }
         });
     });
+
+    /*аккордион - раскрывающийся список*/
+    $(".toggle-header").each(function(){
+        $(this).on("click", function() {
+
+            var elToggle = $(this).closest(".toggle");
+            elToggle.toggleClass("active");
+
+            var elContentTgl = $(this).next();
+
+            if (elToggle.hasClass("active")){
+                elContentTgl.slideDown();
+            } else {
+                elContentTgl.slideUp();
+            }
+
+        });
+    }); //кнопка
+    /*аккордион - раскрывающийся список*/
 });

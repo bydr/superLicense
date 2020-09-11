@@ -210,8 +210,8 @@
       color: $orange-lighter;
     }
 
-    &:hover {
-      color: $orange;
+    &:hover, &:focus {
+      color: $orange!important;
     }
 
     > * {

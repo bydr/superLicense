@@ -32,6 +32,7 @@
                             <p class="dr-text__small c-light text-center">
                                 Отправляя сообщение, вы соглашаетесь с <a href="#" class="c-light dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" class="c-light dr-text__small dr-text__underline">Политикой конфиденциальности.</a></p>
                             <div class="form-group text-center">
+                                <a data-modal="modal_thanks">Test modal</a>
                                 <button type="submit" class="dr-btn dr-btn__orange-gradient w-100 max-w-300">отправить</button>
                             </div>
                         </form>

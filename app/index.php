@@ -45,6 +45,8 @@
         <li><a href="contracts-paid-medical-page.php " class="">Договор платных мед услуг форма</a></li>
         <li><a href="contracts-total-page.php" class="">Договора оплата</a></li>
         <li><a href="review-form-page.php" class="">Форма добавления отзыва</a></li>
+        <li><a href="faq-page.php" class="">Вопрос-ответ (FAQ)</a></li>
+        <li><a href="thanks.php" class="">Модальное окно благодарности</a></li>
     </ol>
     <h2>Шаблоны документов</h2>
     <h2>ППК Медицина</h2>
