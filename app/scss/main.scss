@@ -2461,10 +2461,34 @@ $border-radius-modal: 20px;
 
 .inactive-link {
   color: $accent-lighter!important;
-  pointer-events: none!important;
-  cursor: not-allowed!important;
-}
+  //pointer-events: none!important;
+  cursor: default!important;
+  position: relative;
 
+  &.hovered{
+    .tooltip_inactive-link {
+      opacity: 1;
+    }
+  }
+}
+.tooltip_inactive-link {
+  font-size: 14px!important;
+  line-height: 14px!important;
+  text-transform: none;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background: $accent-gradient-darken;
+  color: $orange-lighter;
+  border-radius: 12px;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 15px 30px rgba(0, 96, 100, 0.5);
+  opacity: 0;
+  transition: all .2s ease-out;
+}
 .label-lined-top {
   border-top: 1px solid $accent-lighter;
   @extend .dr-text__small;

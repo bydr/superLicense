@@ -443,13 +443,7 @@ $(function () {
         }
     });
 
-    $('[data-toggle="popover"]').popover({
-        template: '<div class="popover" role="tooltip"><span class="popover-close"></span><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
-    });
-    // закрытие tooltip по нажатию на крестик
-    $('body').on('click', '.popover-close', function () {
-        $(`[aria-describedby=${$(this).closest('.popover').attr('id')}]`).click();
-    });
+
 
 
     /*dropdown*/
@@ -600,4 +594,62 @@ $(function () {
         });
     }); //кнопка
     /*аккордион - раскрывающийся список*/
+
+    var $inactiveLink = $('.inactive-link');
+    var $inactiveHtml = `Требуется авторизация. Пожалуйста, зарегистрируйтесь на сайте`;
+
+    $(document).ready(function () {
+        $inactiveLink.attr('data-toggle', 'popover')
+            .attr('data-html', 'true')
+            .attr('data-placement', 'top')
+            .attr('data-content', $inactiveHtml);
+    });
+
+    $('[data-toggle="popover"]').popover({
+        template: '<div class="popover" role="tooltip"><span class="popover-close"></span><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    });
+    // закрытие tooltip по нажатию на крестик
+    $('body').on('click', '.popover-close', function () {
+        $(`[aria-describedby=${$(this).closest('.popover').attr('id')}]`).click();
+    });
+
+    $(window).on('load resize', function () {
+        if ($(this).width() > 768) {
+            $inactiveLink.on('mousemove', function (e) {
+                e.preventDefault();
+                tltpLinkShow($(this));
+            });
+            $inactiveLink.on('mouseout', function (e) {
+                e.preventDefault();
+                tltpLinkHide($(this));
+            });
+            $inactiveLink.on('click', function (e) {
+                e.preventDefault();
+            });
+        } else {
+            $inactiveLink.on('click', function (e) {
+                e.preventDefault();
+                if (!$(this).hasClass('hovered')) {
+                    $(this).popover('show');
+                    $(this).addClass('hovered');
+                } else {
+                    $(this).removeClass('hovered');
+                    $(this).popover('hide');
+                }
+            });
+        }
+    });
+
+
+    function tltpLinkShow(el) {
+        if (!el.hasClass('hovered')) {
+            el.popover('show');
+            el.addClass('hovered');
+        }
+    }
+    function tltpLinkHide(el) {
+        el.removeClass('hovered');
+        el.popover('hide');
+    }
+
 });
