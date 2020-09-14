@@ -100,6 +100,7 @@
         <li><a href="docs/templates/contracts/Договор аренды двое собственников медицина.html">Договор аренды двое собственников медицина</a></li>
         <li><a href="docs/templates/contracts/Договор аренды двое  собственников аптека.html">Договор аренды двое  собственников аптека</a></li>
         <li><a href="docs/templates/contracts/Договор на платные услуги.html">Договор на платные услуги</a></li>
+        <li><a href="docs/templates/contracts/Договор трудовой.html">Договор трудовой</a></li>
     </ol>
 </div>
 
