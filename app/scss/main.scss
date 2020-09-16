@@ -2742,5 +2742,37 @@ $border-radius-modal: 20px;
   }
 }
 
+.customizer-content {
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  * {
+    font-size: $txt-normal-fz;
+    line-height: $txt-normal-lh;
+  }
+  h1 {
+    @extend .headers-h1;
+  }
+  h2 {
+    @extend .headers-h2;
+  }
+  h3 {
+    @extend .headers-h3;
+  }
+  h4 {
+    @extend .headers-h4;
+  }
+  h5 {
+    @extend .headers-h5;
+  }
+
+  &.bg-overlay {
+     * {
+      color: $light;
+    }
+  }
+}
 
 @import "media"; // Always at the end
