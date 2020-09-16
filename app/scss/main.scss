@@ -550,6 +550,12 @@ img {
       margin-top: 20px;
     }
 
+    &__content {
+      max-height: 285px;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
     &_wrapper {
       margin-bottom: 35px;
 
@@ -568,11 +574,10 @@ img {
     }
 
     &__show_active {
-      display: none;
       transition: max-height 0.2s ease-out;
     }
 
-    &.is-active {
+    &.active {
     }
   }
 }

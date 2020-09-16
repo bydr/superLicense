@@ -6,7 +6,8 @@ include_once "template-parts/modal_thanks.php";
 
 ?>
 <script>
-    $('html').addClass('o-hidden');
-    $('.dr-modal').addClass('is-active');
+   $(document).ready(function () {
+        drModalShow('#modal_thanks');
+   });
 </script>
 

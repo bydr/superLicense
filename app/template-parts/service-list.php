@@ -8,18 +8,9 @@
                 </div>
                 <div class="service-item__content">
                     <div class="headers-h2 c-accent text-center service-item__title"><?=$item['title']; ?></div>
-                    <p class="dr-text__normal service-item__hide_active service-item__descr_short">
-                        <?php $MAX_LENGTH_DESCR = 250; ?>
-                        <?php if (strlen($item['description']) > $MAX_LENGTH_DESCR) : ?>
-                            <?=substr(strip_tags($item['description']), 0, $MAX_LENGTH_DESCR); ?>...
-                        <?php else : ?>
-                            <?=strip_tags($item['description']); ?>
-                        <?php endif ?>
-                    </p>
                     <div class="service-item__show_active">
                         <p class="dr-text__normal service-item__descr_full">
                             <?=$item['description']; ?>
-
                         </p>
                         <div class="d-flex w-100 text-center justify-content-center">
                             <a href="#" class="service-item_btn_cta dr-btn dr-btn__outline c-orange max-w-250">

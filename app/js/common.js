@@ -1,3 +1,6 @@
+const MODAL_BTN_CLOSE = ".dr-modal__close";
+const ACTIVE_CLASS = "is-active";
+
 $(function () {
 
     // Custom JS
@@ -300,54 +303,56 @@ $(function () {
 
     /* раскрытие и скрытие service list jquery */
     var serviceItemBtn = $('.service-item__toggle .dr-btn');
+    const MAX_HEIGHT_SERVICE_ITEM = 285;
+    $(window).on('load', function () {
+        $('.service-item').each(function () {
+            let serviceItemContent = $(this).find('.service-item__content');
+            serviceItemContent.attr('data-height', serviceItemContent.height());
+            serviceItemContent.css('max-height', `${MAX_HEIGHT_SERVICE_ITEM}px`);
+        });
+    });
     serviceItemBtn.on('click', function (e) {
         e.preventDefault();
         let serviceItem = $(this).closest('.service-item');
+        let serviceItemContent = serviceItem.find('.service-item__content');
+        let heightItemContent = 0;
 
+        /* вычисляем реальную высоту контента */
+        serviceItemContent.children().each(function () {
+            heightItemContent += $(this).outerHeight(true);
+        });
+
+        console.log(heightItemContent);
+
+        /* меняем название кнопки */
         let btnTextDefault = "";
         btnTextDefault = $(this).text();
         $(this).text($(this).attr('btnTextAlternate'));
         $(this).attr('btnTextAlternate', btnTextDefault);
 
-        let fullInfo = serviceItem.find('.service-item__show_active');
+        /* скрываем или раскрываем блок */
         if (serviceItem.hasClass("active")){
             serviceItem.removeClass('active');
-            fullInfo.slideUp();
+            serviceItemContent.css('max-height', `${MAX_HEIGHT_SERVICE_ITEM}px`)
         } else {
             serviceItem.addClass('active');
-            fullInfo.slideDown();
+            serviceItemContent.css('max-height', `${heightItemContent}px`)
         }
     });
     /* раскрытие и скрытие service list jquery */
 
-    let modalBtnClose = ".dr-modal__close";
-    let activeClass = "is-active";
+
 
     /* открытие модалки по нажатию на кнопку */
     $("*[data-modal]").on('click', function (e) {
         e.preventDefault();
-        drModalShow($(this));
+        drModalShow($(this).data('modal'));
     });
 
     /* закрытие модалки по нажатию на кнопку */
-    $(modalBtnClose).on('click', function () {
+    $(MODAL_BTN_CLOSE).on('click', function () {
         drModalHide($(this));
     });
-
-    function drModalHide(context) {
-        $(context).closest('.dr-modal').removeClass(activeClass);
-        $('html').removeClass('o-hidden');
-    }
-
-    function drModalShow(currentTarget, overlayStatus = true) {
-        let btnModalId = currentTarget.data('modal');
-        let modal = `.dr-modal[id="${btnModalId}"]`;
-        if (btnModalId) {
-            $(modal).addClass(activeClass);
-        }
-        $(modal).find('.dr-modal__overlay').eq(0).css("opacity", overlayStatus ? "1" : "0");
-        $('html').addClass('o-hidden');
-    }
 
     $(".modal-cancel, #btn_deleteAccount").on("click", function () {
         drModalHide($(this));
@@ -639,17 +644,30 @@ $(function () {
             });
         }
     });
-
-
-    function tltpLinkShow(el) {
-        if (!el.hasClass('hovered')) {
-            el.popover('show');
-            el.addClass('hovered');
-        }
-    }
-    function tltpLinkHide(el) {
-        el.removeClass('hovered');
-        el.popover('hide');
-    }
-
 });
+
+
+function tltpLinkShow(el) {
+    if (!el.hasClass('hovered')) {
+        el.popover('show');
+        el.addClass('hovered');
+    }
+}
+function tltpLinkHide(el) {
+    el.removeClass('hovered');
+    el.popover('hide');
+}
+function drModalHide(context) {
+    $(context).closest('.dr-modal').removeClass(ACTIVE_CLASS);
+    $('html').removeClass('o-hidden');
+}
+
+function drModalShow(idNameModal, overlayStatus = true) {
+    let modal = `.dr-modal[id="${idNameModal}"]`;
+    if (modal) {
+        $(modal)
+            .addClass(ACTIVE_CLASS)
+            .find('.dr-modal__overlay').eq(0).css("opacity", overlayStatus ? "1" : "0");
+    }
+    $('html').addClass('o-hidden');
+}
