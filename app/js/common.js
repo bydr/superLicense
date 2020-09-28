@@ -143,7 +143,8 @@ $(function () {
     $('body').on('click', '.fl_default', function () {
         $(".fl_default").change(function () {
             var filename = "<p class='uploaded-file'>";
-            filename += `Загружено 
+            filename += `
+                ${getEndgingWord($(this)[0].files.length, ['Загружен', 'Загружено', 'Загружено'])}
                 ${$(this)[0].files.length} 
                 ${getEndgingWord($(this)[0].files.length, ['файл', 'файла', 'файлов'])}`;
             filename += "</p>";
@@ -152,23 +153,10 @@ $(function () {
                 .addClass("selected_file");
         });
     });
-
-    function getEndgingWord(n, text_forms) {
-        n = Math.abs(n) % 100;
-        let n1 = n % 10;
-        if (n > 10 && n < 20) {
-            return text_forms[2];
-        }
-        if (n1 > 1 && n1 < 5) {
-            return text_forms[1];
-        }
-        if (n1 === 1) {
-            return text_forms[0];
-        }
-        return text_forms[2];
-    }
-
     /* кастомный input[type="file"] */
+
+
+
 
     // $('.owl-carousel').owlCarousel();
 
@@ -248,23 +236,33 @@ $(function () {
     //             .html('Пароли не совпадают');
     // });
 
-    let content = $('.readmore-content');
-    const maxHeightInitial = 1850;
-
     $(document).ready(function () {
-        content
-            .attr('initial-height', content.height())
-            .css('max-height', `${maxHeightInitial}px`);
+        initialHeightReadmoreContent('.section-clients .readmore-content', 1850);
+        initialHeightReadmoreContent('.section-ppk-preview-info .readmore-content', 950);
     });
 
     $('.readmore-btn').on('click', function (e) {
         e.preventDefault();
-        $(this)
+        showReadmoreContent($(this));
+    });
+
+    function initialHeightReadmoreContent(contentName, maxHeightInitial) {
+        let content = $(contentName),
+            contentHeight = content.height();
+        content
+            .attr('initial-height', contentHeight)
+            .css('max-height', `${maxHeightInitial}px`);
+        if (contentHeight <= maxHeightInitial) {
+            content.closest('.readmore').find('.readmore-btn').addClass('hide');
+        }
+    }
+    function showReadmoreContent(btn) {
+        btn
             .addClass('hide')
             .closest('.readmore')
-            .find(content).css('max-height', `${content.attr('initial-height')}px`)
+            .find('.readmore-content').css('max-height', `${$('.readmore-content').attr('initial-height')}px`)
             .find('.readmore-overlay').css('opacity', 0);
-    });
+    }
 
     $(document).ready(function () {
         // let serviceItems = $('.service-item');
@@ -303,7 +301,7 @@ $(function () {
 
     /* раскрытие и скрытие service list jquery */
     var serviceItemBtn = $('.service-item__toggle .dr-btn');
-    const MAX_HEIGHT_SERVICE_ITEM = 285;
+    const MAX_HEIGHT_SERVICE_ITEM = 255;
     $(window).on('load', function () {
         $('.service-item').each(function () {
             let serviceItemContent = $(this).find('.service-item__content');
@@ -358,9 +356,7 @@ $(function () {
         drModalHide($(this));
     });
 
-    const TIMER_DELETE_ACCOUNT = 10;
-    var timerBlock = '.timer-seconds';
-    var timerSeconds = 0;
+
 
     $(document).ready(function () {
         $(timerBlock).html(TIMER_DELETE_ACCOUNT);
@@ -378,23 +374,6 @@ $(function () {
             clearTimer(timerSeconds);
         }, 200);
     });
-
-    function startTimerSeconds(callbackFunc) {
-        var index = TIMER_DELETE_ACCOUNT;
-        timerSeconds = setInterval(function () {
-            $(timerBlock).html(index--);
-            if (index < 0) {
-                clearTimer(timerSeconds);
-                callbackFunc();
-            }
-        }, 1000);
-    }
-
-    function clearTimer(timer) {
-        clearInterval(timer);
-        $(timerBlock).html(TIMER_DELETE_ACCOUNT);
-    }
-
 
     $('.radio-group__masonry').masonry({
         // options
@@ -486,19 +465,7 @@ $(function () {
         removeControlsRow($(this));
     });
 
-    function addControlsRow(element) {
-        let addedElement =`<div class="controls-added__row">
-            ${element
-            .closest('.controls-added__row_original')
-            .html()}</div>`;
-        element
-            .closest('.controls-added')
-            .append(addedElement);
-        $('.controls-added__row:not(.controls-added__row_original):last-child').find('.controls-btn_add').remove();
-    }
-    function removeControlsRow(element) {
-        element.closest('.controls-added__row').remove();
-    }
+
 
     /* кастомный select */
     $(function () {
@@ -670,4 +637,52 @@ function drModalShow(idNameModal, overlayStatus = true) {
             .find('.dr-modal__overlay').eq(0).css("opacity", overlayStatus ? "1" : "0");
     }
     $('html').addClass('o-hidden');
+}
+function getEndgingWord(n, text_forms) {
+    n = Math.abs(n) % 100;
+    let n1 = n % 10;
+    if (n > 10 && n < 20) {
+        return text_forms[2];
+    }
+    if (n1 > 1 && n1 < 5) {
+        return text_forms[1];
+    }
+    if (n1 === 1) {
+        return text_forms[0];
+    }
+    return text_forms[2];
+}
+
+const TIMER_DELETE_ACCOUNT = 10;
+const timerBlock = '.timer-seconds';
+var timerSeconds = 0;
+
+function startTimerSeconds(callbackFunc) {
+    var index = TIMER_DELETE_ACCOUNT;
+    timerSeconds = setInterval(function () {
+        $(timerBlock).html(index--);
+        if (index < 0) {
+            clearTimer(timerSeconds);
+            callbackFunc();
+        }
+    }, 1000);
+}
+
+function clearTimer(timer) {
+    clearInterval(timer);
+    $(timerBlock).html(TIMER_DELETE_ACCOUNT);
+}
+
+function addControlsRow(element) {
+    let addedElement =`<div class="controls-added__row">
+            ${element
+        .closest('.controls-added__row_original')
+        .html()}</div>`;
+    element
+        .closest('.controls-added')
+        .append(addedElement);
+    $('.controls-added__row:not(.controls-added__row_original):last-child').find('.controls-btn_add').remove();
+}
+function removeControlsRow(element) {
+    element.closest('.controls-added__row').remove();
 }

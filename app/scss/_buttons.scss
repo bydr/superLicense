@@ -60,6 +60,14 @@
             box-shadow: $shadow-orange-hover;
         }
     }
+    &__accent {
+        background: $accent;
+        color: $light;
+        box-shadow: none;
+        &:hover {
+            box-shadow: none;
+        }
+    }
     &__accent-gradient {
         @extend .bg-accent-gradient;
         box-shadow: $shadow-green2;
@@ -87,6 +95,18 @@
 
         &:hover, &:focus, &:active {
             filter: drop-shadow($shadow-orange-outline);
+        }
+
+        &.dr-btn {
+            &__accent {
+                background: transparent;
+                color: $accent;
+                border-color: $accent;
+
+                &:hover, &:focus, &:active {
+                    filter: none;
+                }
+            }
         }
     }
     &__icon {

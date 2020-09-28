@@ -40,7 +40,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-clients">
     <div class="container">
         <div class="readmore">
             <div class="readmore-content">

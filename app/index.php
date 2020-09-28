@@ -38,6 +38,7 @@
         <li><a href="ppk-public-catering-page.php" class="">Конфигуратор ППК Общепит</a></li>
         <li><a href="ppk-pharmacy-page.php" class="">Конфигуратор ППК Фармация</a></li>
         <li><a href="ppk-total-page.php" class="">Конфигуратор ППК Итог</a></li>
+        <li><a href="ppk-preview-info-page.php" class="">ППК предварительная информация</a></li>
         <li><a href="contracts-page.php" class="">Договоры</a></li>
         <li><a href="contracts-rent-general-page.php" class="">Договор аренды общий форма</a></li>
         <li><a href="contracts-rent-three-person-page.php" class="">Договор аренды 3 лица форма</a></li>
@@ -47,7 +48,9 @@
         <li><a href="review-form-page.php" class="">Форма добавления отзыва</a></li>
         <li><a href="faq-page.php" class="">Вопрос-ответ (FAQ)</a></li>
         <li><a href="thanks.php" class="">Модальное окно благодарности</a></li>
+        <li><a href="purchasing_access_configuration.php" class="">Приобретение доступа к конфигуратору</a></li>
     </ol>
+    <br><br><br>
     <h2>Шаблоны документов</h2>
     <h2>ППК Медицина</h2>
     <ol>

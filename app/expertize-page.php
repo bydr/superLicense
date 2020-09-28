@@ -21,7 +21,7 @@
                 <div class="fl_upld">
                     <label>
                         <span class="dr-btn dr-btn__big dr-btn__outline c-orange w-100 max-w-400 ml-0 mb-0">
-                          <input class="fl_default" type="file" name="file" multiple="">
+                          <input class="fl_default" type="file" name="file" accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .odt" multiple="">
                           <span>
                             <span>Загрузить еще</span>
                           </span>

@@ -249,8 +249,9 @@ a, a:hover {
       height: 100%;
       left: -39.24%;
       right: -12.01%;
-      top: 0;
-      margin-top: -10%;
+      top: auto;
+      bottom: 0;
+      margin-top: 0;
     }
 
     &-cta {
@@ -279,12 +280,16 @@ a, a:hover {
 
   &-person {
     background: $light;
-    padding: 1em 0 3em 0;
+    padding: 4em 0 3em 0;
 
     .section-image {
       img {
         transform: scale(1.2);
       }
+    }
+
+    .label-photo, .label-photo:hover {
+      color: $accent;
     }
   }
 
@@ -408,6 +413,18 @@ a, a:hover {
 
   &-website-sections {
     background: $accent-lightest;
+  }
+
+  &-license-work {
+    .customizer-content {
+      color: $accent-darken;
+    }
+  }
+
+  &-ppk-preview-info {
+    .customizer-content {
+      color: transparentize($accent-darker, .3);
+    }
   }
 }
 
@@ -551,7 +568,7 @@ img {
     }
 
     &__content {
-      max-height: 285px;
+      max-height: 255px;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
     }
@@ -1149,11 +1166,11 @@ $border-radius-modal: 20px;
       }
     }
     input, textarea {
-      background: $orange-lighter;
-      color: $accent-darker;
+      background: $orange-lighter !important;
+      color: $accent-darker !important;
 
       &::placeholder {
-        color: $accent-darker;
+        color: $accent-darker !important;
       }
     }
   }
@@ -2090,7 +2107,7 @@ $border-radius-modal: 20px;
     overflow: hidden;
     //max-height: 1850px;
     position: relative;
-    transition: max-height .2s ease-in;
+    transition: max-height .3s ease-in;
   }
   &-overlay {
     transition: opacity 0.25s ease 0s;
@@ -2249,7 +2266,7 @@ $border-radius-modal: 20px;
     width: auto;
     display: inline-flex;
     min-width: 1px;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -2747,10 +2764,12 @@ $border-radius-modal: 20px;
   display: block;
   padding: 0;
   margin: 0;
+  color: $accent-darker;
 
   * {
     font-size: $txt-normal-fz;
     line-height: $txt-normal-lh;
+    color: inherit;
   }
   h1 {
     @extend .headers-h1;

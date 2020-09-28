@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <p class="dr-text__small c-accent__lightest text-center mt-10 max-w-400">
-                    Регистрируясь, вы соглашаетесь с <a href="#" class="dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" class="dr-text__small dr-text__underline">Политикой конфиденциальности</a>.
+                    Регистрируясь, вы соглашаетесь с <a href="#" class="dr-text__small dr-text__underline">Условиями обслуживания</a> и <a href="#" data-modal="modal_policy" class="dr-text__small dr-text__underline">Политикой конфиденциальности</a>.
                 </p>
             </div>
         </div>
@@ -86,5 +86,7 @@
 
 </section>
 
+
+<?php include_once "template-parts/modal_policy.php"; ?>
 <?php require_once('footer.php'); ?>
 <?php require_once('foot.php'); ?>

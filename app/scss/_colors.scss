@@ -192,6 +192,14 @@
       }
     }
 
+    &__darker-t3 {
+      color: transparentize($accent-darker, .3)!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+
     &__darken {
       color: $accent-darken!important;
 

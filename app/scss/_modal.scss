@@ -57,17 +57,24 @@
   }
 
   &__close {
+    @extend .dr-btn__square;
     display: block;
     position: absolute;
     height: 35px;
     width: 35px;
     min-height: 35px;
     min-width: 35px;
-    right: 2px;
-    top: 2px;
+    right: 10px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
 
     svg {
-      stroke: $accent-darker;
+      stroke: $accent;
     }
   }
 
@@ -93,7 +100,7 @@
   }
 
   &__body {
-    padding: 4vw 6vw 2vw 6vw;
+    padding: 2.5vw 6vw 2vw 6vw;
   }
 
   &__title {
@@ -179,4 +186,14 @@
       min-width: 188px;
     }
   }
+
+  &-information {
+    .dr-modal__content {
+      max-width: 1024px;
+    }
+    .dr-modal__header {
+      padding: 1em 0;
+    }
+  }
+
 }
