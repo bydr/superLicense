@@ -611,6 +611,20 @@ $(function () {
             });
         }
     });
+
+    $('body').on('click', ".list-selection__item-selected .checkbox:first-child input[type='checkbox']", function () {
+        let checkboxBtn = $(this).closest('.checkbox');
+        if ($(this).prop('checked')) {
+            checkboxBtn.addClass('checkbox_checked');
+        } else {
+            checkboxBtn.removeClass('checkbox_checked');
+            checkboxBtn
+                .siblings('.checkbox')
+                .find("input[type='checkbox']")
+                .prop('checked', false);
+        }
+
+    });
 });
 
 

@@ -1511,6 +1511,15 @@ $border-radius-modal: 20px;
 
       .checkbox {
         width: 150px;
+
+        &:not(:first-child) {
+          pointer-events: none;
+        }
+        &.checkbox_checked {
+          ~.checkbox {
+            pointer-events: all;
+          }
+        }
       }
 
       .dr-btn-group {
