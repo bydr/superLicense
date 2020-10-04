@@ -1,6 +1,7 @@
 @import "vars";
 
 .dr-btn {
+    position: relative;
     appearance: none;
     font-family: $default-font;
     font-style: normal;
@@ -107,7 +108,20 @@
                     filter: none;
                 }
             }
+            &__disabled {
+                border-color: $gray!important;
+                color: $gray!important;
+                box-shadow: none!important;
+                pointer-events: none!important;
+                &:hover, &:focus {
+                    border-color: inherit;
+                    color: inherit;
+                    box-shadow: inherit;
+                }
+            }
         }
+
+
     }
     &__icon {
         margin: 0;
@@ -130,4 +144,6 @@
     > * {
         margin: 0!important;
     }
+
+
 }

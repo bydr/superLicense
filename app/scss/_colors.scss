@@ -21,6 +21,10 @@
       background: $accent-darker;
       color: $light;
 
+      &.opacity_bg-7 {
+        background: transparentize($accent-darker, .3);
+      }
+
       a {
         &:hover {
           color: inherit;
@@ -154,6 +158,17 @@
   &-transparent {
     background: transparent !important;
   }
+
+  &-red {
+    background: $red !important;
+    color: $light;
+
+    a {
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
 }
 
 .c {
@@ -170,6 +185,13 @@
 
     &__lightest {
       color: $accent-lightest!important;
+
+      > * {
+        color: inherit;
+      }
+    }
+    &__super-lightest {
+      color: $accent-super-lightest;
 
       > * {
         color: inherit;

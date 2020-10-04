@@ -10,6 +10,11 @@
 <section class="section section-main bg-overlay">
     <div class="container">
         <div class="row">
+            <div class="col-12 col-lg-5 col-md-12">
+                <div class="section-image">
+                    <img src="images/_src/frame-15.svg" alt="">
+                </div>
+            </div>
             <div class="col-12 col-lg-7 col-md-12">
                 <div class="section-content">
                     <div class="section-content__wrapper">
@@ -24,11 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-5 col-md-12">
-                <div class="section-image">
-                    <img src="images/_src/frame-15.svg" alt="">
-                </div>
-            </div>
+
         </div>
     </div>
 </section>

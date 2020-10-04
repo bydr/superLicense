@@ -6,6 +6,7 @@
     <h2>Страницы для теста</h2>
     <ol>
         <li><a href="main-page.php" class="">Главная</a></li>
+        <li><a href="main-redesign-page.php" class="">Главная (Редизайн)</a></li>
         <li><a href="registration-page.php" class="">Регистрация</a></li>
         <li><a href="authorization-page.php" class="">Авторизация</a></li>
         <li><a href="reset-password-page.php" class="">Восстановление пароля</a></li>
@@ -49,6 +50,9 @@
         <li><a href="faq-page.php" class="">Вопрос-ответ (FAQ)</a></li>
         <li><a href="thanks.php" class="">Модальное окно благодарности</a></li>
         <li><a href="purchasing_access_configuration.php" class="">Приобретение доступа к конфигуратору</a></li>
+        <li><a href="license-registration-procedure-page.php" class="">Порядок оформления лицензии</a></li>
+        <li><a href="last-warning_configurator_1.php" class="">Последнее предупреждение перед конфигуратором 1</a></li>
+        <li><a href="last-warning_configurator_2.php" class="">Последнее предупреждение перед конфигуратором 2</a></li>
     </ol>
     <br><br><br>
     <h2>Шаблоны документов</h2>

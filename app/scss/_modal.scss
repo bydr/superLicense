@@ -133,7 +133,15 @@
       .dr-modal__content {
         max-width: $dr-modal-content_sm_bigger;
       }
+      .dr-modal__body {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 500px;
+        margin: 0 auto;
+      }
     }
+
+
   }
 
 

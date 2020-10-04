@@ -45,4 +45,7 @@
     <li class="nav-item">
         <a class="nav-link" href="#">Контакты</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link bg-red" href="#">FAQ</a>
+    </li>
 </ul>

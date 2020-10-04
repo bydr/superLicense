@@ -21,9 +21,9 @@
                     <p class="headers-h3 c-accent__darken mb-0">7500 ₽</p>
                 </div>
                 <div class="w-100 d-flex flex-column justify-content-center text-center">
-                    <a href="#" class="dr-btn dr-btn__outline dr-btn__accent c-accent max-w-300 w-100">перейти в раздел
+                    <a href="#" class="dr-btn dr-btn__outline dr-btn__accent c-accent max-w-350 w-100">перейти в раздел
                         «лицензионное дело»</a>
-                    <a href="#" class="dr-btn dr-btn__outline max-w-300 w-100 c-orange">оплатить единоразовый
+                    <a href="#" class="dr-btn dr-btn__outline max-w-350 w-100 c-orange">оплатить единоразовый
                         доступ к конфигуратору</a>
                 </div>
                 <p class="dr-text__small c-accent__darker-t3 text-center mt-10">Услуга доступна только для авторизованных пользователей. Пожалуйста, <a
