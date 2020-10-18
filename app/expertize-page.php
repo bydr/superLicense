@@ -19,14 +19,13 @@
                 </p>
 
                 <div class="fl_upld">
-                    <label>
-                        <span class="dr-btn dr-btn__big dr-btn__outline c-orange w-100 max-w-400 ml-0 mb-0">
-                          <input class="fl_default" type="file" name="file" accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .odt" multiple="">
-                          <span>
-                            <span>Загрузить еще</span>
-                          </span>
+                        <span class="fl_upld__btn dr-btn dr-btn__big dr-btn__outline c-orange w-100 max-w-400 ml-0 mb-0">
+                            <span class="fl_upld__btn_lbl" data-text-alternate="Загрузить еще">Загрузить</span>
+                            <span class="fl_tracker" style="display: none;">0</span>
                         </span>
-                    </label>
+                        <span class="fl_field__list">
+                          <input data-id="0" class="fl_default fl_default_ex" type="file" name="file_0" accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .odt" multiple="">
+                        </span>
                     <div class="fl_nm"></div>
                 </div>
 

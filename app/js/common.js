@@ -67,55 +67,11 @@ $(function () {
     });
 
     function getSectionSelectedItem(value, experience = 3) {
-        return `
-        <div class="list-selection__item-selected bg-accent__darker">
-            <span class="list-selection__item__close"></span>
-            <p class="list-selection__selected-title dr-text__normal mb-0"><b>${value}</b></p>
-            <div class="dr-btn-group">
-                <label class="checkbox checkbox-btn">
-                    <input type="checkbox" class="check-certificate">
-                    <span class="checkbox-inner">
-                        <span class="checkbox-box">
-                        
-                        <svg class="checkbox-svg__active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 11L12 14L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-
-                        <svg class="checkbox-svg__disabled" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="1" width="18" height="18" rx="3" stroke="#17343E" stroke-width="2"/>
-                        </svg>
-
-
-                        </span>
-                        <span class="checkbox-text dr-text__small">Сертификат</span>
-                    </span>
-                </label>
-                <label class="checkbox checkbox-btn">
-                    <input type="checkbox" class="check-experience">
-                    <span class="checkbox-inner">
-                        <span class="checkbox-box">
-                        
-                        <svg class="checkbox-svg__active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 11L12 14L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-
-                        <svg class="checkbox-svg__disabled" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="1" width="18" height="18" rx="3" stroke="#17343E" stroke-width="2"/>
-                        </svg>
-
-
-                        </span>
-                        <span class="checkbox-text dr-text__small">
-                        Стаж ${experience} 
-                        ${(experience === 3)?'года':'лет'}
-                        </span>
-                    </span>
-                </label>
-            </div>
-        </div>
-    `;
+        var template = $('.list-selection__templates').html();
+        return template
+            .replace('@value@', value)
+            .replace('@experience_val@', experience)
+            .replace('@experience@', (experience === 3)?'года':'лет');
     }
 
     /* выбор элемент из списка  (образование) */
@@ -140,13 +96,63 @@ $(function () {
 
 
     /* кастомный input[type="file"] */
+    $('body').on('click', '.fl_upld__btn', function () {
+
+        //при клике на кнопку Загрузить - выбрать соответствующий input file
+        $(this)
+            .closest('.fl_upld')
+            .find(`input[data-id=${$(this).find('.fl_tracker').text()}]`).click();
+
+    });
+
     $('body').on('click', '.fl_default', function () {
         $(".fl_default").change(function () {
+
+            let $isError = $(this).closest('.field-uploadform-files');
+            if ($(this).attr('aria-invalid')) {
+                return;
+            }
+
+            var fieldList = $(this).closest('.fl_field__list'),
+                fields = fieldList.find('input'),
+                incDataId = fieldList.find('input').last().data('id') + 1,
+                countAllFiles = 0;
+
+            //дублирование поля
+            //удаление класса _ex, очистка загруженных файлов
+            //установка нового data-id
+            fieldList
+                .find('.fl_default_ex')
+                .clone()
+                .appendTo('.fl_field__list')
+                .removeClass('fl_default_ex')
+                .val("")
+                .attr('data-id', incDataId)
+                .attr('name', `file_${incDataId}`);
+
+            //обновление id кнопки в соответствии с id поля
+            $(this).closest('.fl_upld')
+                .find('.fl_tracker')
+                .text(incDataId);
+
+            // при загрузке второй раз - изменение названия кнопки, в последующие разы нет смысла менять
+            let btnLabel = $(this).closest('.fl_upld').find('.fl_upld__btn_lbl');
+            if(incDataId > 0 && incDataId < 2) {
+                let temp = btnLabel.text();
+                btnLabel.text(btnLabel.data('text-alternate'));
+                btnLabel.attr('data-text-alternate', temp);
+            }
+
+            //количество загруженных файлов во всх инпутах
+            fields.each(function() {
+                countAllFiles += $(this)[0].files.length;
+            });
+
             var filename = "<p class='uploaded-file'>";
             filename += `
-                ${getEndgingWord($(this)[0].files.length, ['Загружен', 'Загружено', 'Загружено'])}
-                ${$(this)[0].files.length} 
-                ${getEndgingWord($(this)[0].files.length, ['файл', 'файла', 'файлов'])}`;
+                ${getEndgingWord(countAllFiles, ['Загружен', 'Загружено', 'Загружено'])}
+                ${countAllFiles} 
+                ${getEndgingWord(countAllFiles, ['файл', 'файла', 'файлов'])}`;
             filename += "</p>";
             $(".fl_nm")
                 .html(filename)

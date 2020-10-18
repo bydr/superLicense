@@ -69,6 +69,7 @@
                 ?>
                 <?php endforeach; ?>
             </div>
+
         </div>
         <h3 class="headers-h3 mt-30">Среднее образование</h3>
         <div class="education_secondary list-content__wrapper list-selection list-selection-js">
@@ -95,7 +96,55 @@
             </div>
         </div>
         <div class="text-center mt-100 pb-90">
-            <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>
+            <a href="#" class="dr-btn dr-btn__disabled dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>
+        </div>
+        <div class="list-selection__templates" style="display: none;">
+            <div class="list-selection__item-selected bg-accent__darker">
+                <span class="list-selection__item__close"></span>
+                <p class="list-selection__selected-title dr-text__normal mb-0"><b>@value@</b></p>
+                <div class="dr-btn-group">
+                    <label class="checkbox checkbox-btn">
+                        <input type="checkbox" class="check-certificate">
+                        <span class="checkbox-inner">
+                        <span class="checkbox-box">
+
+                        <svg class="checkbox-svg__active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 11L12 14L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        <svg class="checkbox-svg__disabled" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="18" height="18" rx="3" stroke="#17343E" stroke-width="2"/>
+                        </svg>
+
+
+                        </span>
+                        <span class="checkbox-text dr-text__small">Сертификат</span>
+                    </span>
+                    </label>
+                    <label class="checkbox checkbox-btn">
+                        <input type="checkbox" class="check-experience">
+                        <span class="checkbox-inner">
+                        <span class="checkbox-box">
+
+                        <svg class="checkbox-svg__active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 11L12 14L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        <svg class="checkbox-svg__disabled" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="18" height="18" rx="3" stroke="#17343E" stroke-width="2"/>
+                        </svg>
+
+
+                        </span>
+                        <span class="checkbox-text dr-text__small">
+                        Стаж @experience_val@ @experience@
+                        </span>
+                    </span>
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
 </div>

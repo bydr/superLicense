@@ -32,6 +32,12 @@
         color: $light;
     }
 
+    &:not(.dr-btn__outline).dr-btn__disabled {
+        opacity: .5;
+        pointer-events: none!important;
+        cursor: default;
+    }
+
     &-h40 {
         min-height: 40px;
         padding-top: 7px;
@@ -119,6 +125,7 @@
                     box-shadow: inherit;
                 }
             }
+
         }
 
 
