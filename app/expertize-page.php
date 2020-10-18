@@ -31,6 +31,7 @@
                                  name="file_0"
                                  accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .odt" multiple="">
                         </span>
+                    </label>
                     <div class="fl_nm"></div>
                 </div>
 
