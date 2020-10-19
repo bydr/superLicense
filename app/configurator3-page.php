@@ -55,7 +55,7 @@
                 $i = 0;
                 foreach($data['education']['higher'] as $item) : ?>
                 <?php if ($i / $countInColumn != 1) { ?>
-                    <div class="list-selection__item">
+                    <div class="list-selection__item" data-year="5">
                         <span class="list-selection__item-inner">
                             <?=$item; ?>&nbsp;→
                         </span>
@@ -80,7 +80,7 @@
             $i = 0;
             foreach($data['education']['middle'] as $item) : ?>
                 <?php if ($i / $countInColumn != 1) { ?>
-                    <div class="list-selection__item">
+                    <div class="list-selection__item" data-year="3">
                         <span class="list-selection__item-inner">
                             <?=$item; ?>&nbsp;→
                         </span>

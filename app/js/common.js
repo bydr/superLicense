@@ -52,15 +52,16 @@ $(function () {
 
     });
     listItems.on('click', function () {
-        getToHtmlSelectedItem($(this), 3);
-    })
-    function getToHtmlSelectedItem(element, experience) {
+        getToHtmlSelectedItem($(this));
+    });
+    function getToHtmlSelectedItem(element) {
         if (!element.hasClass('selected')) {
-            var template = $('.list-selection__templates').html();
-            var title = element.find('.list-selection__item-inner').text().replace("→", "");
+            var template = $('.list-selection__templates').html(),
+                title = element.find('.list-selection__item-inner').text().replace("→", ""),
+                expYear = element.data('year');
             template = template
                 .replace('@value@', title)
-                .replace('@experience_val@', experience);
+                .replace('@experience_val@', expYear +" "+ getEndgingWord(expYear, ['год', 'года', 'лет']));
             element.append(template);
             element.css('padding-bottom',
                 `${
