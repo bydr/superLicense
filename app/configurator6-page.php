@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="text-center mt-100">
-            <a href="#" class="dr-btn dr-btn__accent-lightest w-100 max-w-400 mb-100">Дальше</a>
+            <a href="#" class="btn-next dr-btn dr-btn__disabled dr-btn__accent-lightest w-100 max-w-400 mb-100">Дальше</a>
         </div>
     </div>
 </div>

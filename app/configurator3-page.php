@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="text-center mt-100 pb-90">
-            <a href="#" class="dr-btn dr-btn__disabled dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>
+            <a href="#" class="btn-next dr-btn dr-btn__disabled dr-btn__accent-lightest w-100 max-w-400">Специальности выбраны</a>
         </div>
         <div class="list-selection__templates" style="display: none;">
             <div class="list-selection__item-selected bg-accent__darker">
@@ -139,7 +139,7 @@
 
                         </span>
                         <span class="checkbox-text dr-text__small">
-                        Стаж @experience_val@ @experience@
+                        Стаж @experience_val@
                         </span>
                     </span>
                     </label>

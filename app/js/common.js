@@ -37,41 +37,41 @@ $(function () {
     let listItemSelected = ".list-selection__item-selected";
     let listItemClose = ".list-selection__item__close";
 
-    $('body').on('click', ".list-selection__item__close", function () {
+    $('body').on('click', listItemClose, function () {
         $(this)
             .closest('.list-selection__item')
             .removeClass('selected')
             .css('padding-bottom', 0)
-            .find(listItemSelected).remove();
-    });
-    listItems.on('click', function (e) {
-        if (!$(this).hasClass('selected')) {
-            let itemValue = $(this).find('.list-selection__item-inner').text().replace("→", "");
+            .find(listItemSelected)
+            .remove();
 
-            // для каждого вида обучения (среднее, высшее) разный стаж
-            if ($(this).closest('.list-selection-js').hasClass('education_higher')) {
-                $(this).append(getSectionSelectedItem(itemValue, 5));
-            } else {
-                $(this).append(getSectionSelectedItem(itemValue, 3));
-            }
-
-            $(this).css('padding-bottom',
-                `${
-                $(this).find('.list-selection__item-selected').outerHeight() 
-                - 
-                $(this).find('.list-selection__item-inner').outerHeight()
-                }px`);
-
-            $(this).addClass('selected');
+        console.log($('.list-selection-js').find(listItemSelected).length);
+        if(!$('.list-selection-js').find(listItemSelected).length) {
+            $('.btn-next').addClass('dr-btn__disabled');
         }
-    });
 
-    function getSectionSelectedItem(value, experience = 3) {
-        var template = $('.list-selection__templates').html();
-        return template
-            .replace('@value@', value)
-            .replace('@experience_val@', experience)
-            .replace('@experience@', (experience === 3)?'года':'лет');
+    });
+    listItems.on('click', function () {
+        getToHtmlSelectedItem($(this), 3);
+    })
+    function getToHtmlSelectedItem(element, experience) {
+        if (!element.hasClass('selected')) {
+            var template = $('.list-selection__templates').html();
+            var title = element.find('.list-selection__item-inner').text().replace("→", "");
+            template = template
+                .replace('@value@', title)
+                .replace('@experience_val@', experience);
+            element.append(template);
+            element.css('padding-bottom',
+                `${
+                    element.find('.list-selection__item-selected').outerHeight()
+                    -
+                    element.find('.list-selection__item-inner').outerHeight()
+                }px`)
+                .addClass('selected');
+
+            $('.dr-btn__disabled').removeClass('dr-btn__disabled');
+        }
     }
 
     /* выбор элемент из списка  (образование) */
@@ -86,11 +86,12 @@ $(function () {
 
         $(this)
             .closest('.list-selection-js-custom')
-            .find('.list-selection__item').removeClass('is-active');
+            .find('.list-selection__item')
+            .removeClass('is-active');
 
         $(this).addClass('is-active');
 
-
+        $('.dr-btn__disabled').removeClass('dr-btn__disabled');
     });
     /* выбор элемент из списка (район/город) */
 
@@ -127,8 +128,7 @@ $(function () {
                 .appendTo('.fl_field__list')
                 .removeClass('fl_default_ex')
                 .val("")
-                .attr('data-id', incDataId)
-                .attr('name', `file_${incDataId}`);
+                .attr('data-id', incDataId);
 
             //обновление id кнопки в соответствии с id поля
             $(this).closest('.fl_upld')
@@ -152,7 +152,7 @@ $(function () {
             filename += `
                 ${getEndgingWord(countAllFiles, ['Загружен', 'Загружено', 'Загружено'])}
                 ${countAllFiles} 
-                ${getEndgingWord(countAllFiles, ['файл', 'файла', 'файлов'])}`;
+                ${getEndgingWord(countAllFiles, ['документ', 'документа', 'документов'])}`;
             filename += "</p>";
             $(".fl_nm")
                 .html(filename)
