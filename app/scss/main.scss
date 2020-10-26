@@ -106,7 +106,7 @@ ul {
 }
 
 .header {
-  position: relative;
+  position: fixed;
   background: $accent;
   color: $light;
   z-index: 99;
@@ -136,6 +136,10 @@ ul {
   }
   .mobile-menu .data-user {
     width: 100%;
+  }
+
+  ~.content-page {
+    margin-top: 70px;
   }
 }
 
