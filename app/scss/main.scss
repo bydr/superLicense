@@ -7,6 +7,7 @@
 @import "modal";
 @import "utils";
 @import "navbar";
+@import "form";
 @import "buttons";
 @import "checkbox";
 @import "radiobutton";
@@ -845,140 +846,7 @@ $panel-ic-bigger: $panel-ic-wrapper-bigger / 2;
   justify-content: space-between;
 }
 
-.dr-form {
-  > * {
-    width: 100%;
-  }
-  &.modal-content__wrapper {
-    max-width: $max-w-modal * 0.70;
-    margin: 0 auto;
-  }
-  &-control {
-    border-radius: $border-radius-modal / 2;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 32px;
-    box-shadow: $shadow-form-control;
-    border-color: transparent;
-    margin: 0;
-    padding: 8px 15px;
-    width: 100%;
-    color: $accent-darker;
-    z-index: 1;
 
-    &::placeholder {
-      color: $accent-lighten;
-    }
-
-  }
-  .dr-btn[type="submit"] {
-    margin-top: 35px;
-  }
-}
-
-.form-group {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 25px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &__label {
-    @extend .dr-text__normal;
-    display: inline-block;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 0 0 5px 0;
-
-    > * {
-      margin-bottom: 0;
-      display: inline;
-    }
-
-    .tooltip-btn {
-      margin: 0 5px;
-    }
-  }
-  &_row {
-    flex-direction: row;
-    align-items: center;
-
-    .form-group {
-      margin-bottom: 0!important;
-    }
-
-    > * {
-      margin-right: 15px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    > input {
-      width: auto;
-      flex: 1;
-    }
-  }
-  .input-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    > *:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-
-  &__message {
-    @extend .dr-text__small;
-    font-weight: bold;
-    margin: 5px 0 0 0;
-    padding: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-    position: absolute;
-    left: -9999px;
-    visibility: hidden;
-    transition: all .2s ease-in-out;
-
-    &.error {
-      color: $orange!important;
-    }
-  }
-
-  &.has-error {
-    .form-group {
-      &__message {
-        left: auto;
-        transform: none;
-        visibility: visible;
-        opacity: 1;
-        position: relative;
-      }
-    }
-    input, textarea {
-      background: $orange-lighter !important;
-      color: $accent-darker !important;
-
-      &::placeholder {
-        color: $accent-darker !important;
-      }
-    }
-  }
-
-  &.has-success {
-    input, textarea {
-      background: $accent-lightest;
-    }
-  }
-}
 
 .bage {
   font-style: normal;
@@ -1902,6 +1770,7 @@ $panel-ic-bigger: $panel-ic-wrapper-bigger / 2;
       margin: 0;
     }
   }
+
 }
 
 /*dropdown*/
@@ -2215,5 +2084,6 @@ $panel-ic-bigger: $panel-ic-wrapper-bigger / 2;
 .mobile-menu .dropdown-list-item__main {
   display: flex;
 }
+
 
 @import "media"; // Always at the end
