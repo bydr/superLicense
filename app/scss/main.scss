@@ -1,16 +1,17 @@
 @import "vars";
 @import "fonts";
-@import "icons";
 @import "libs";
+@import "headers";
+@import "colors";
+@import "icons";
+@import "modal";
+@import "utils";
+@import "navbar";
 @import "buttons";
 @import "checkbox";
 @import "radiobutton";
 @import "select";
-@import "headers";
-@import "colors";
-@import "modal";
-@import "utils";
-@import "navbar";
+
 
 ::placeholder {
   color: #666;
