@@ -232,7 +232,7 @@
   }
 
   &-orange {
-    color: $orange;
+    color: $orange!important;
 
     &__lighten {
       color: $orange-lighten;
