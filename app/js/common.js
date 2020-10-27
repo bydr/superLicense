@@ -458,7 +458,7 @@ $(function () {
             $(this).removeClass('active');
         });
 
-        $('.dropdown-header').on('click', function (e) {
+        $('.mobile-menu .dropdown-header').on('click', function (e) {
             e.preventDefault();
             var parent = $(this).closest('.dropdown-nav');
             if (!parent.hasClass('active')) {

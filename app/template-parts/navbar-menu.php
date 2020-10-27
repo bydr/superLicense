@@ -3,11 +3,11 @@
     <li class="nav-item">
 <!--        <a class="nav-link" href="#">Лицензионное дело</a>-->
         <div class="dropdown-nav">
-            <div class="dropdown-header">
+            <a href="#" class="dropdown-header">
                 <div class="dropdown-title">
                     <span class="text-default">Лицензионное дело</span>
                 </div>
-            </div>
+            </a>
             <div class="dropdown-list">
                 <ul>
                     <li class="dropdown-list-item"><a href="#">порядок оформления медицинской лицензии</a></li>
@@ -19,11 +19,11 @@
     </li>
     <li class="nav-item">
         <div class="dropdown-nav">
-            <div class="dropdown-header">
+            <a href="#" class="dropdown-header">
                 <div class="dropdown-title">
                     <span class="text-default">Услуги</span>
                 </div>
-            </div>
+            </a>
             <div class="dropdown-list">
                 <ul>
                     <li class="dropdown-list-item"><a href="#">правовая помощь</a></li>
