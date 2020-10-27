@@ -1,11 +1,16 @@
 @import "vars";
 @import "fonts";
+@import "icons";
 @import "libs";
 @import "buttons";
+@import "checkbox";
+@import "radiobutton";
+@import "select";
 @import "headers";
 @import "colors";
 @import "modal";
 @import "utils";
+@import "navbar";
 
 ::placeholder {
   color: #666;
@@ -140,68 +145,6 @@ ul {
 
   ~.content-page {
     margin-top: 70px;
-  }
-}
-
-.dr-navbar {
-  &-nav {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  .nav-item {
-    position: initial;
-    margin: 0;
-    padding: 0;
-
-    > * {
-      padding: 25px 15px;
-      display: flex;
-
-      &:hover {
-        color: $light;
-      }
-    }
-  }
-
-  .nav-link {
-    &.bg-red {
-      &:hover, &:focus {
-        background: $light!important;
-        color: $red;
-      }
-    }
-  }
-
-  .dropdown, .dropdown-nav {
-    padding: 0;
-    position: initial;
-
-    &-header {
-      padding: 25px 15px;
-    }
-
-    .label-lined-top {
-      @extend .dr-text__small;
-      @extend .c-accent__lighter;
-      text-transform: none;
-      margin: 0 20px;
-      padding: 5px 0;
-    }
-  }
-
-  .navbar-brand {
-    padding: 0;
-
-    > img {
-      margin-right: 10px;
-      max-height: 35px;
-      width: auto;
-    }
   }
 }
 
@@ -575,8 +518,6 @@ img {
   }
 }
 
-
-
 .big-digital {
   font-style: normal;
   font-weight: 300;
@@ -660,7 +601,6 @@ img {
     }
   }
 }
-
 
 $panel-ic-wrapper-normal: 60px;
 $panel-ic-normal: $panel-ic-wrapper-normal / 2;
@@ -748,102 +688,6 @@ $panel-ic-bigger: $panel-ic-wrapper-bigger / 2;
   }
   &-body {
     flex: 1;
-  }
-}
-
-.ic {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-
-  &-white {
-    filter: brightness(0) invert(1);
-  }
-
-  &-layers {
-    @extend .ic;
-    background-image: url(../images/_src/icons/layers.svg);
-  }
-
-  &-arrow-right {
-    @extend .ic;
-    background-image: url(../images/_src/icons/arrow-right.svg);
-  }
-  &-arrow-down {
-    @extend .ic;
-    background-image: url(../images/_src/icons/arrow-down.svg);
-  }
-
-  &-aktivity {
-    @extend .ic;
-    background-image: url(../images/_src/icons/activity.svg);
-  }
-
-  &-file-text {
-    @extend .ic;
-    background-image: url(../images/_src/icons/file-text.svg);
-  }
-
-
-  &-file-plus {
-    @extend .ic;
-    background-image: url(../images/_src/icons/file-plus.svg);
-  }
-
-  &-paperclip {
-    @extend .ic;
-    background-image: url(../images/_src/icons/paperclip.svg);
-  }
-
-  &-phone {
-    @extend .ic;
-    background-image: url(../images/_src/icons/phone.svg);
-  }
-
-  &-info {
-    @extend .ic;
-    background-image: url(../images/_src/icons/info.svg);
-  }
-
-  &-align-left {
-    @extend .ic;
-    background-image: url(../images/_src/icons/align-left.svg);
-  }
-
-  &-x {
-    @extend .ic;
-    background-image: url(../images/_src/icons/x.svg);
-  }
-  &-user {
-    @extend .ic;
-    background-image: url(../images/_src/icons/user.svg);
-  }
-  &-crown {
-    @extend .ic;
-    background-image: url(../images/_src/icons/crown.svg);
-  }
-  &-big {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    background-size: 30px;
-  }
-  &-exit {
-    @extend .ic;
-    background-image: url(../images/_src/icons/exit.svg);
   }
 }
 
@@ -998,115 +842,6 @@ $panel-ic-bigger: $panel-ic-wrapper-bigger / 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-$max-w-modal: 600px;
-$border-radius-modal: 20px;
-
-.modal {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &.modal-wpadding {
-    > .modal-content {
-      padding: 50px 30px 20px 30px;
-    }
-  }
-
-  > .modal-content {
-    padding: 0;
-  }
-
-  &-content {
-    width: 100%;
-    position: relative;
-    padding: 50px 30px 20px 30px;
-    max-width: $max-w-modal;
-    box-shadow: $shadow-green2;
-    margin: 0 auto;
-    border-radius: $border-radius-modal;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 500px;
-    overflow-x: hidden; overflow-y: auto;
-
-    &__wrapper {
-      width: 100%;
-    }
-
-    &.bg-accent__lighter {
-      .ic {
-        &-x {
-          opacity: .5;
-        }
-      }
-    }
-
-    &.bg-accent__darker {
-      .ic {
-        &-x {
-          filter: brightness(1.5);
-        }
-      }
-    }
-
-    &__components {
-      padding: 0;
-
-      > * {
-        width: 100%;
-      }
-
-      .modal {
-        &-header {
-          padding: 35px 20px;
-
-          > * {
-            margin: 0;
-          }
-        }
-        &-footer {
-          padding: 0 20px 40px 20px;
-        }
-        &-body {
-          padding: 40px 20px 30px 20px;
-        }
-      }
-    }
-  }
-
-  &-close {
-    position: absolute;
-    right: 13px;
-    top: 13px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    > .icon {
-      margin: 0;
-    }
-  }
-
-  &-title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  &-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
 }
 
 .dr-form {
@@ -1275,12 +1010,6 @@ $border-radius-modal: 20px;
 .page-title {
   padding: 0;
   margin: 1.2em 0;
-}
-.icon {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
 }
 
 .data-user {
@@ -1615,250 +1344,6 @@ $border-radius-modal: 20px;
 
 }
 
-
-.checkbox {
-  cursor: pointer !important;
-
-  * {
-    transition: all .2s ease-in!important;
-  }
-
-  &-svg {
-    &__active {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-    }
-    &__disabled {
-      opacity: 1;
-      visibility: visible;
-      position: relative;
-    }
-  }
-
-  input[type="checkbox"] {
-    opacity: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    -moz-appearance: none;
-    -ms-progress-appearance: unset;
-    visibility: hidden;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-
-    &:checked {
-      ~ .checkbox-inner {
-        opacity: 1;
-
-        .checkbox-svg {
-          &__active {
-            opacity: 1;
-            visibility: visible;
-            position: relative;
-          }
-          &__disabled {
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-          }
-        }
-
-      }
-    }
-  }
-
-  $checkbox-box: 20px;
-  &-box {
-    background: transparent;
-    margin: 0 15px 0 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    > svg {
-      min-width: $checkbox-box;
-      min-height: $checkbox-box;
-      max-width: $checkbox-box;
-      max-height: $checkbox-box;
-    }
-  }
-
-  &-text {
-    font-weight: bold;
-    color: inherit;
-  }
-
-  &-btn {
-    .checkbox-inner {
-      background: $accent-gradient;
-      border-radius: 6px;
-      padding: 5px 10px;
-    }
-  }
-
-  &-inner {
-    display: flex;
-    align-items: center;
-    opacity: .4;
-
-  }
-
-  $checkbox-default-box: 28px;
-  &.checkbox-default {
-
-    .checkbox {
-      &-box {
-        min-width: $checkbox-default-box;
-        min-height: $checkbox-default-box;
-        width: $checkbox-default-box;
-        height: $checkbox-default-box;
-        background-color: $accent-lighten;
-        border-radius: 8px;
-
-        > svg {
-          opacity: 0;
-          transform: translateY(-10px);
-          transition: all .2s ease-in-out;
-        }
-      }
-      &-inner {
-        opacity: 1;
-        align-items: flex-start;
-      }
-      &-text {
-        > * {
-          display: block;
-        }
-      }
-    }
-
-    input[type="checkbox"] {
-      &:checked {
-        ~ .checkbox-inner {
-          opacity: 1;
-
-          .checkbox-box {
-            background-color: $orange-lighten;
-
-            svg {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        }
-      }
-    }
-
-  }
-
-}
-
-.radio {
-  $radio-default-box: 21px;
-  $radio-default-box-min: 11px;
-  cursor: pointer;
-
-  &.radio-default {
-
-    .radio {
-      &-box {
-        position: relative;
-        display: inline-flex;
-        min-width: $radio-default-box;
-        min-height: $radio-default-box;
-        width: $radio-default-box;
-        height: $radio-default-box;
-        background-color: $accent-lighten;
-        border-radius: 50px;
-        margin-right: 15px;
-        margin-top: 5px;
-
-        &:before {
-          content: '';
-          position: absolute;
-          min-width: $radio-default-box-min;
-          min-height: $radio-default-box-min;
-          width: $radio-default-box-min;
-          height: $radio-default-box-min;
-          background-color: $light;
-          left: 50%;
-          margin-left: -5.5px;
-          top: 50%;
-          margin-top: -5.5px;
-          opacity: 0;
-          transform: scale(0);
-          transition: all .2s cubic-bezier(0.18, 0.89, 0.32, 1.38);
-          border-radius: 50px;
-        }
-
-      }
-      &-inner {
-        display: flex;
-        opacity: 1;
-        align-items: flex-start;
-      }
-      &-text {
-        > * {
-          display: block;
-        }
-      }
-    }
-
-    input[type="radio"] {
-      opacity: 0;
-      -webkit-appearance: none;
-      appearance: none;
-      -moz-appearance: none;
-      -ms-progress-appearance: unset;
-      visibility: hidden;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-
-      &:checked {
-        ~ .radio-inner {
-          opacity: 1;
-
-          .radio-box {
-            background-color: $orange-lighten;
-
-            &:before {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-        }
-      }
-    }
-
-  }
-
-  &-group {
-    padding: 0;
-    margin: 0 0 20px 0;
-
-    &__title {
-      @extend .dr-text__normal;
-      font-weight: bold;
-      margin-left: 36px;
-    }
-    &__list {
-      padding: 0;
-      margin: 0;
-
-      .radio {
-        margin-bottom: 20px;
-      }
-    }
-
-    &__wrapper {
-
-    }
-  }
-}
-
 .dr-btn-group {
   > * {
     margin: 5px;
@@ -1986,7 +1471,6 @@ $border-radius-modal: 20px;
 
   }
 }
-
 
 .user-data {
   &__header {
@@ -2202,16 +1686,6 @@ $border-radius-modal: 20px;
   }
 }
 
-.o-hidden {
-  overflow: hidden !important;
-}
-
-.fw {
-  &-bold {
-    font-weight: bold !important;
-  }
-}
-
 .cabinet-info {
   padding: 0;
   margin: 0;
@@ -2314,6 +1788,7 @@ $border-radius-modal: 20px;
 .bs-popover-auto[x-placement^=right]>.arrow::after, .bs-popover-right>.arrow::after {
   border-right-color: $accent;
 }
+
 .input-number-people {
   width: 100px;
 }
@@ -2596,143 +2071,6 @@ $border-radius-modal: 20px;
   z-index: 0;
 }
 
-
-.simple-select {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-  outline: none!important;
-
-  * {
-    outline: none!important;
-  }
-
-  &.is-active {
-    .simple-select__drop {
-      opacity: 1;
-      visibility: visible;
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      z-index: 2;
-    }
-    .simple-select__main svg {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-  &__selected {
-    @extend .dr-text__normal;
-    margin: 0;
-    padding: 0;
-
-    > * {
-      @extend .dr-text__normal;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-  }
-
-  &__main {
-    @extend .dr-form-control;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    background: $light;
-    color: $accent-lighter;
-    position: relative;
-    z-index: 3;
-
-    * {
-      color: inherit;
-    }
-
-    svg {
-      width: 24px;
-      height: 24px;
-      margin-left: 15px;
-      transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -o-transition: all .2s ease;
-    }
-  }
-  &__drop {
-    background: $accent-gradient;
-    color: $light;
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    left: 0;
-    visibility: hidden;
-    transition: all .2s ease;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    z-index: -1;
-    overflow: hidden auto;
-    max-height: 280px;
-    box-shadow: none;
-    border-radius: 0 0 10px 10px;
-    margin-top: -10px;
-
-    ul {
-      padding: 10px 0 0 0;
-      margin: 0;
-      list-style: none;
-    }
-  }
-  &__item {
-    border: 0;
-    padding: 0;
-
-    > * {
-      @extend .dr-text__normal;
-      -webkit-appearance: none !important;
-      -moz-appearance: none !important;
-      appearance: none !important;
-      background: transparent;
-      width: 100%;
-      font-style: normal;
-      text-align: left;
-      padding: 10px 12px;
-      transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -o-transition: all .2s ease;
-      border: 0;
-      color: $light;
-    }
-
-    &:hover {
-      background: transparentize($light, .7);
-    }
-    &.is-active {
-      pointer-events: none;
-      cursor: default;
-      background: $accent-darken;
-
-      * {
-        color: inherit;
-        pointer-events: none;
-        cursor: default;
-      }
-    }
-  }
-}
-
 .toggle {
   padding: 24px 20px 20px 32px;
   background: $light;
@@ -2867,6 +2205,14 @@ $border-radius-modal: 20px;
 }
 .bg-accent__super-lightest .readmore-overlay {
   background: linear-gradient(transparentize($accent-super-lightest, 1) 10%, $accent-super-lightest 100%);
+}
+
+.dropdown-list-item__main {
+  display: none;
+}
+
+.mobile-menu .dropdown-list-item__main {
+  display: flex;
 }
 
 @import "media"; // Always at the end

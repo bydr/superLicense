@@ -1,0 +1,138 @@
+.checkbox {
+  cursor: pointer !important;
+
+  * {
+    transition: all .2s ease-in!important;
+  }
+
+  &-svg {
+    &__active {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+    }
+    &__disabled {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: unset;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    &:checked {
+      ~ .checkbox-inner {
+        opacity: 1;
+
+        .checkbox-svg {
+          &__active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+          }
+          &__disabled {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+          }
+        }
+
+      }
+    }
+  }
+
+  $checkbox-box: 20px;
+  &-box {
+    background: transparent;
+    margin: 0 15px 0 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    > svg {
+      min-width: $checkbox-box;
+      min-height: $checkbox-box;
+      max-width: $checkbox-box;
+      max-height: $checkbox-box;
+    }
+  }
+
+  &-text {
+    font-weight: bold;
+    color: inherit;
+  }
+
+  &-btn {
+    .checkbox-inner {
+      background: $accent-gradient;
+      border-radius: 6px;
+      padding: 5px 10px;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    opacity: .4;
+
+  }
+
+  $checkbox-default-box: 28px;
+  &.checkbox-default {
+
+    .checkbox {
+      &-box {
+        min-width: $checkbox-default-box;
+        min-height: $checkbox-default-box;
+        width: $checkbox-default-box;
+        height: $checkbox-default-box;
+        background-color: $accent-lighten;
+        border-radius: 8px;
+
+        > svg {
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: all .2s ease-in-out;
+        }
+      }
+      &-inner {
+        opacity: 1;
+        align-items: flex-start;
+      }
+      &-text {
+        > * {
+          display: block;
+        }
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked {
+        ~ .checkbox-inner {
+          opacity: 1;
+
+          .checkbox-box {
+            background-color: $orange-lighten;
+
+            svg {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

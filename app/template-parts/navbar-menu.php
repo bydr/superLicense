@@ -10,6 +10,9 @@
             </a>
             <div class="dropdown-list">
                 <ul>
+                    <li class="dropdown-list-item dropdown-list-item__main">
+                        <a href="" class="">Лицензионное дело</a>
+                    </li>
                     <li class="dropdown-list-item"><a href="#">порядок оформления медицинской лицензии</a></li>
                     <li class="dropdown-list-item"><a href="#" class="inactive-link">конфигуратор оформления медицинской лицензии</a></li>
                     <li class="dropdown-list-item"><a href="#" class="inactive-link">конфигуратор переоформления медицинской лицензии</a></li>
@@ -26,6 +29,9 @@
             </a>
             <div class="dropdown-list">
                 <ul>
+                    <li class="dropdown-list-item dropdown-list-item__main">
+                        <a href="" class="">Услуги</a>
+                    </li>
                     <li class="dropdown-list-item"><a href="#">правовая помощь</a></li>
                     <li class="dropdown-list-item"><a href="#">экспертиза образовательных документов</a></li>
                 </ul>

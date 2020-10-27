@@ -150,3 +150,13 @@
     margin-right: 40px !important;
   }
 }
+
+.o-hidden {
+  overflow: hidden !important;
+}
+
+.fw {
+  &-bold {
+    font-weight: bold !important;
+  }
+}
